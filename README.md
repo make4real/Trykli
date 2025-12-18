@@ -1,6 +1,6 @@
 # Trykli
 
-Prototype .io temps réel respectant le GDD fourni. Frontend HTML5 + Canvas, backend Node.js léger (WebSocket) avec repli automatique sur une simulation locale pour rester jouable sur Netlify.
+Prototype .io temps réel respectant le GDD fourni. Frontend HTML5 + Canvas, backend Node.js léger (WebSocket) avec repli automatique sur une simulation locale pour rester jouable sur Netlify. La logique de simulation est mutualisée (navigateur + serveur) pour rester cohérente, dans l'esprit d'une boucle serveur autoritaire façon openfront.
 
 ## Fonctionnalités V0
 - Trois cartes inspirées (Europe, Amériques, Asie) avec terrains et points (capitales, ressources, postes de défense).
