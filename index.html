@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trykli — Jeux de couple</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">✨</div>
+      <div>
+        <h1>Trykli</h1>
+        <p>Jeux de couple</p>
+      </div>
+    </div>
+    <div class="top-actions">
+      <button class="ghost" id="randomSiteBtn">Jeu aléatoire (site)</button>
+      <button class="ghost" id="randomVocalBtn">Jeu aléatoire (vocal)</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="homeView" class="view active">
+      <div class="controls">
+        <input type="text" id="searchInput" placeholder="Rechercher un jeu, un tag..." />
+        <div id="filters" class="filters"></div>
+      </div>
+
+      <section class="section-block">
+        <div class="section-header">
+          <h2>Jeux jouables sur le site (20)</h2>
+        </div>
+        <div class="grid" id="siteGameGrid"></div>
+      </section>
+
+      <section class="section-block">
+        <div class="section-header">
+          <h2>Jeux à jouer avec ChatGPT en mode vocal (5)</h2>
+        </div>
+        <div class="grid" id="vocalGameGrid"></div>
+      </section>
+    </section>
+
+    <section id="gameView" class="view">
+      <div class="game-header">
+        <button class="ghost" id="backHomeBtn">← Retour accueil</button>
+        <div>
+          <h2 id="gameTitle"></h2>
+          <p id="gameMeta"></p>
+        </div>
+        <div class="game-actions">
+          <button class="primary" id="newBtn">Nouveau</button>
+          <button class="ghost" id="passBtn">Passer</button>
+        </div>
+      </div>
+
+      <div class="game-layout">
+        <section class="panel">
+          <h3>Règles</h3>
+          <ul id="rulesList"></ul>
+          <div class="timer">
+            <div>
+              <strong>Timer</strong>
+              <span id="timerLabel">60s</span>
+            </div>
+            <div class="timer-actions">
+              <button class="ghost" id="timerStartBtn">Start</button>
+              <button class="ghost" id="timerStopBtn">Stop</button>
+              <button class="ghost" id="timerResetBtn">Reset</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h3>Carte / Question</h3>
+          <div id="cardDisplay" class="card"></div>
+          <div id="extraDisplay" class="extra"></div>
+          <div id="gameControls" class="controls-grid"></div>
+        </section>
+
+        <section class="panel">
+          <h3>Score</h3>
+          <div class="scoreboard">
+            <div>
+              <span>Joueur A</span>
+              <div class="score-actions">
+                <button class="ghost" data-score="A" data-action="minus">-</button>
+                <strong id="scoreA">0</strong>
+                <button class="ghost" data-score="A" data-action="plus">+</button>
+              </div>
+            </div>
+            <div>
+              <span>Joueur B</span>
+              <div class="score-actions">
+                <button class="ghost" data-score="B" data-action="minus">-</button>
+                <strong id="scoreB">0</strong>
+                <button class="ghost" data-score="B" data-action="plus">+</button>
+              </div>
+            </div>
+          </div>
+          <button class="ghost" id="resetScoreBtn">Reset score</button>
+        </section>
+
+        <section class="panel">
+          <h3>Historique (10 derniers)</h3>
+          <ol id="historyList"></ol>
+          <div id="savedList" class="saved"></div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Trykli — démarrez 2025 avec humour, complicité et des petits défis à deux.</p>
+  </footer>
+
+  <script src="assets/data.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
