@@ -1,245 +1,306 @@
-/* Données 100% locales pour Couple New Year Games */
+/* Trykli data: toutes les cartes/questions localement */
 const buildVariants = (base, variants, formatter) => {
-  const out = [];
+  const output = [];
   base.forEach((item) => {
-    variants.forEach((variant) => {
-      out.push(formatter(item, variant));
-    });
+    variants.forEach((variant) => output.push(formatter(item, variant)));
   });
-  return out;
+  return output;
 };
 
 const sliceTo = (arr, count) => arr.slice(0, count);
 
-const whoOfUsBase = [
+// [1] Qui de nous deux ? (80)
+const whoBase = [
   "oublie toujours où il/elle a posé son téléphone",
-  "sait improviser un plan en 2 minutes",
-  "a le plus de playlists",
-  "ferait rire l'autre en pleine réunion",
-  "commande systématiquement un dessert",
-  "se lève le plus tôt le week-end",
-  "préfère organiser un voyage surprise",
+  "propose un plan spontané qui finit en aventure",
+  "s'endort pendant un film",
+  "déborde d'idées pour un week-end",
   "répond le plus vite aux messages",
-  "a le meilleur radar à bons plans",
-  "propose une soirée jeux spontanée",
-  "raconte les meilleures histoires",
+  "choisit toujours le dessert",
+  "est le/la plus patient(e)",
+  "se souvient du plus de détails",
+  "met la musique la plus motivante",
+  "sait calmer l'autre en 30 secondes",
   "prend les meilleures photos",
   "a la playlist la plus chill",
-  "sait calmer une dispute rapidement",
-  "a toujours une idée de cadeau",
-  "danse même sans musique",
-  "est le/la plus patient(e)",
-  "serait le meilleur chef d'un food truck",
-  "garde le plus de souvenirs",
-  "a le plus d'énergie après minuit"
+  "fait rire l'autre même fatigué(e)",
+  "prépare les surprises",
+  "a le radar pour les bons plans",
+  "commence les conversations profondes",
+  "est le/la plus organisé(e)",
+  "fait des câlins surprises",
+  "trouve les meilleurs jeux",
+  "a toujours un mot doux"
 ];
-
-const whoOfUsVariants = [
-  "quand on sort en ville",
+const whoVariants = [
+  "quand on sort",
+  "le dimanche",
   "pendant les vacances",
-  "les jours de pluie",
-  "en mode cosy"
+  "en mode cocooning"
 ];
-
 const whoOfUs = sliceTo(
-  buildVariants(whoOfUsBase, whoOfUsVariants, (base, variant) => `Qui de nous deux ${base} ${variant} ?`),
-  60
-);
-
-const preferPairs = [
-  ["un réveil avec petit déjeuner au lit", "un dîner surprise maison"],
-  ["un road trip improvisé", "un week-end cocooning"],
-  ["une soirée jeux de société", "une soirée karaoké"],
-  ["un message vocal mignon", "une note manuscrite"],
-  ["un pique-nique au parc", "un brunch en terrasse"],
-  ["danser dans le salon", "chanter dans la voiture"],
-  ["un film romantique", "une comédie légère"],
-  ["un match d'impro", "un concert intimiste"],
-  ["une balade de nuit", "une balade au lever du soleil"],
-  ["un défi cuisine", "un défi photo"],
-  ["un café en amoureux", "un chocolat chaud en pyjama"],
-  ["une séance massage", "une séance yoga duo"],
-  ["un souvenir vidéo", "un album photo"],
-  ["planifier un projet fou", "se laisser porter"],
-  ["un cadeau utile", "un cadeau symbolique"],
-  ["une escapade nature", "une escapade urbaine"],
-  ["un jeu de questions", "un jeu d'indices"],
-  ["un message spontané", "un message bien pensé"],
-  ["un dessert chocolaté", "un dessert fruité"],
-  ["une soirée sans téléphone", "une soirée avec playlist"],
-  ["un défi sportif doux", "un défi créatif"],
-  ["un plan long terme", "un plan spontané"],
-  ["une playlist chill", "une playlist dansante"],
-  ["un souvenir d'enfance partagé", "un souvenir récent"],
-  ["un cadeau fait main", "un cadeau choisi ensemble"],
-  ["un brunch tardif", "un dîner tôt"],
-  ["une aventure gourmande", "une aventure artistique"],
-  ["un jeu de rôles", "un jeu de devinettes"],
-  ["un moment silencieux", "un moment très bavard"],
-  ["une journée sans plan", "une journée ultra organisée"],
-  ["un message codé", "un message direct"],
-  ["un voyage proche", "un voyage lointain"],
-  ["un marathon séries", "un marathon films"],
-  ["une mission surprise", "une mission choisie"],
-  ["un cadeau souvenir", "un cadeau expérience"],
-  ["un restaurant habituel", "une nouvelle adresse"],
-  ["une nuit blanche à discuter", "une nuit très reposante"],
-  ["un cours ensemble", "un atelier maison"],
-  ["un selfie fun", "une photo posée"],
-  ["un défi de mémoire", "un défi d'imagination"]
-];
-
-const preferVariants = ["Version douce :", "Version fun :"];
-const wouldYouRather = sliceTo(
-  preferPairs.flatMap((pair, idx) =>
-    preferVariants.map((variant) => `${variant} Tu préfères ${pair[0]} ou ${pair[1]} ?`)
-  ),
+  buildVariants(whoBase, whoVariants, (base, variant) => `Qui de nous deux ${base} ${variant} ?`),
   80
 );
 
+// [10] Tu préfères (120)
+const preferPairs = [
+  ["un petit-déj au lit", "un dîner surprise"],
+  ["une balade nocturne", "un lever de soleil"],
+  ["un marathon séries", "un marathon films"],
+  ["un week-end nature", "un week-end urbain"],
+  ["un message vocal", "une lettre papier"],
+  ["un jeu de société", "un jeu d'impro"],
+  ["une surprise spontanée", "un plan organisé"],
+  ["une playlist commune", "une playlist secrète"],
+  ["un défi photo", "un défi cuisine"],
+  ["une soirée sans écran", "une soirée playlist"],
+  ["un cadeau utile", "un cadeau symbolique"],
+  ["un brunch tardif", "un dîner tôt"],
+  ["une journée sans plan", "une journée planifiée"],
+  ["une aventure gourmande", "une aventure artistique"],
+  ["un message codé", "un message direct"],
+  ["un cadeau surprise", "un cadeau choisi"],
+  ["un voyage proche", "un voyage lointain"],
+  ["un moment silencieux", "un moment bavard"],
+  ["une soirée jeux", "une soirée karaoké"],
+  ["un selfie fun", "une photo posée"],
+  ["une sortie street food", "un resto romantique"],
+  ["un atelier créatif", "un atelier sportif"],
+  ["un café en terrasse", "un chocolat chaud"],
+  ["une activité surprise", "une activité classique"],
+  ["un défi mémoire", "un défi imagination"],
+  ["un message du matin", "un message du soir"],
+  ["une séance yoga", "une séance danse"],
+  ["un album photo", "une vidéo souvenir"],
+  ["un cadeau fait main", "un cadeau premium"],
+  ["un objectif fun", "un objectif ambitieux"]
+];
+const preferVariants = ["Tu préfères", "Tu préfères version fun", "Tu préfères version douce", "Tu préfères version rapide"];
+const wouldYouRather = sliceTo(
+  preferPairs.flatMap((pair) =>
+    preferVariants.map((variant) => `${variant} : ${pair[0]} ou ${pair[1]} ?`)
+  ),
+  120
+);
+
+// [2] Vérités (80) + Gages (80)
 const truthBase = [
-  "un moment où tu t'es senti(e) ultra fier(ère) de l'autre",
-  "un souvenir de notre première rencontre",
-  "une habitude de l'autre que tu trouves adorable",
-  "une chose que tu veux apprendre avec l'autre en 2025",
-  "un moment où tu as vraiment ri grâce à l'autre",
-  "une petite attention que tu aimerais recevoir",
+  "un moment où tu étais fier(ère) de nous",
+  "une habitude de l'autre que tu adores",
   "un rêve de voyage à deux",
-  "une chanson qui te fait penser à nous",
-  "un trait de caractère que tu admires chez l'autre",
-  "un petit rituel que tu aimerais créer",
-  "un compliment que tu n'oses pas toujours dire",
-  "un défi personnel que l'autre pourrait t'aider à relever",
-  "un souvenir qui te rassure quand tu doutes",
-  "un message que tu aimerais recevoir ce soir",
-  "un moment où tu t'es senti(e) compris(e)",
-  "un moment où tu as appris quelque chose sur l'autre",
+  "un compliment que tu veux dire",
+  "un souvenir qui te fait sourire",
   "une surprise que tu aimerais organiser",
-  "un souvenir de vacances préféré",
-  "un moment où tu as été touché(e) par l'autre",
-  "une chose que tu veux célébrer ensemble"
+  "une qualité que tu admires",
+  "une chose que tu veux apprendre ensemble",
+  "un moment où tu t'es senti(e) compris(e)",
+  "un petit rituel que tu aimerais créer",
+  "un objectif personnel pour 2025",
+  "une chanson qui te fait penser à nous",
+  "un moment où tu as été touché(e)",
+  "un message que tu aimerais recevoir",
+  "un geste qui te rassure",
+  "une anecdote drôle sur nous",
+  "un moment où tu as appris quelque chose",
+  "un moment de complicité",
+  "un souvenir de vacances",
+  "un moment simple qui t'a fait du bien"
 ];
-
-const truthVariants = [
-  "Raconte",
-  "Explique",
-  "Partage",
-  "Décris",
-  "Raconte en 3 phrases",
-  "Raconte avec un exemple"
-];
-
+const truthVariants = ["Raconte", "Explique", "Décris", "Partage"];
 const truths = sliceTo(
   buildVariants(truthBase, truthVariants, (base, variant) => `${variant} : ${base}.`),
-  60
+  80
 );
 
 const dareBase = [
+  "fais un mini discours d'amour",
+  "donne 3 compliments rapides",
   "imite la façon dont l'autre dit bonjour",
-  "fais un mini discours d'amour de 20 secondes",
-  "donne trois compliments rapides",
   "mime votre premier rendez-vous",
-  "fais un high five + câlin",
-  "raconte une blague nulle",
+  "improvise un toast",
   "décris l'autre comme une météo",
-  "fais une déclaration comme dans un film",
-  "invente un surnom et explique pourquoi",
-  "fais une pose photo de couple",
-  "improvise un micro poème",
-  "prépare un plan de soirée en 30 secondes",
-  "fais un battle de regards",
+  "invente un surnom",
+  "fais un micro poème",
+  "raconte une blague",
+  "fais une pose photo",
+  "improvise une pub pour votre couple",
+  "fais un câlin surprise",
+  "faites un high-five synchronisé",
   "décris un souvenir sans dire l'année",
   "fais un compliment en rime",
-  "propose un mini toast de nouvel an",
-  "fais un mini reportage sur l'autre",
+  "imite un présentateur radio",
+  "propose un plan de soirée",
+  "fais un mini massage de 10s",
   "mime un fou rire",
-  "propose un défi doux",
-  "fais un petit massage de 10 secondes"
+  "improvise une petite chanson"
 ];
-
-const dareVariants = [
-  "Tout de suite",
-  "Version douce",
-  "Mode express"
-];
-
+const dareVariants = ["Tout de suite", "Mode doux", "Mode express", "Version fun"];
 const dares = sliceTo(
   buildVariants(dareBase, dareVariants, (base, variant) => `${variant} : ${base}.`),
+  80
+);
+
+// [5] Débats absurdes (60)
+const debateTopics = [
+  "les chaussettes dépareillées", "les playlists sans skip", "les doudous", "les selfies ratés",
+  "les réveils musicaux", "les plantes", "les brunchs tardifs", "les mugs XXL",
+  "les emojis", "les pizzas en cœur", "les chaussons moelleux", "les jeux de société",
+  "les câlins de 3 secondes", "les smoothies", "les messages vocaux"
+];
+const debateAngles = [
+  "devraient être obligatoires", "sont sous-estimés", "sont totalement surestimés", "devraient être patrimoine du couple"
+];
+const absurdDebates = sliceTo(
+  buildVariants(debateTopics, debateAngles, (topic, angle) => `Débat : ${topic} ${angle}.`),
   60
 );
 
-const absurdThemes = [
-  "les chaussettes dépareillées", "les câlins de 3 secondes", "les playlists sans skip",
-  "les réveils musicaux", "les pizzas en cœur", "les emojis préférés", "les selfies ratés",
-  "les goûts bizarres de glace", "les plantes d'intérieur", "les soirées quiz", "les chaussons moelleux"
-];
-const absurdAngles = [
-  "devraient être obligatoires", "sont sous-estimés", "sont totalement surestimés", "devraient être classés patrimoine du couple"
-];
-const absurdDebates = sliceTo(
-  buildVariants(absurdThemes, absurdAngles, (theme, angle) => `Débat : ${theme} ${angle}.`),
-  44
-).slice(0, 40);
-
+// [12] Impro théâtre (60)
 const improvRoles = [
-  "un(e) chef(fe) pâtissier(ère)", "un(e) DJ romantique", "un(e) détective du quotidien", "un(e) explorateur(trice)",
-  "un(e) coach motivation", "un(e) astronaute", "un(e) chef(fe) de projet", "un(e) influenceur(se) cuisine",
-  "un(e) bibliothécaire curieux(se)", "un(e) scénariste"
+  "un(e) DJ romantique", "un(e) détective du quotidien", "un(e) astronaute", "un(e) chef(fe) pâtissier(ère)",
+  "un(e) guide touristique", "un(e) coach motivation", "un(e) bibliothécaire curieux(se)", "un(e) photographe",
+  "un(e) influenceur(se) cuisine", "un(e) explorateur(trice)"
 ];
 const improvPlaces = [
   "dans un train de nuit", "sur un rooftop", "dans une cabane", "au marché", "dans un musée",
-  "dans un ascenseur", "dans une fête de village", "dans une salle d'attente", "dans un studio photo", "sur une plage"
+  "dans un ascenseur", "dans une fête de village", "dans un studio photo", "sur une plage", "dans une salle d'attente"
 ];
 const improvTwists = [
-  "un secret doit être révélé", "quelqu'un a oublié son prénom", "un cadeau surprise apparaît",
-  "il faut parler uniquement en questions", "vous êtes pressés par un minuteur",
-  "une chanson imaginaire commence", "vous devez parler comme dans un film noir",
-  "une pluie de confettis tombe", "vous venez de gagner un prix",
-  "un animal imaginaire intervient"
+  "un secret doit être révélé", "il faut parler uniquement en questions", "une pluie de confettis tombe",
+  "vous venez de gagner un prix", "vous devez parler comme dans un film noir", "un cadeau surprise apparaît"
 ];
-
 const improvCards = sliceTo(
-  improvRoles.flatMap((role) =>
+  improvRoles.flatMap((roleA) =>
     improvPlaces.flatMap((place) =>
-      improvTwists.map((twist) => ({ role, place, twist }))
+      improvTwists.map((twist) => ({ roleA, place, twist }))
     )
   ),
-  50
+  60
 );
 
+// [15] Challenges 1 min (80)
 const minuteBase = [
-  "réciter l'alphabet à l'envers en alternant", "faire 20 pas synchronisés", "lister 10 souvenirs",
-  "faire 10 compliments sans répéter", "trouver 12 mots doux", "inventer un slogan de couple",
-  "trouver 8 destinations", "mimer 6 émotions", "citer 10 chansons", "faire une mini danse",
-  "trouver 15 mots qui riment", "proposer 6 activités", "faire un duel de regards",
-  "écrire 3 objectifs sur un papier", "faire une statue vivante", "raconter 5 blagues",
-  "faire un jeu de mains", "imiter 4 personnages", "trouver 7 dates importantes", "faire 12 high-fives"
+  "lister 12 souvenirs", "faire 10 compliments", "trouver 10 mots doux", "mimer 6 émotions",
+  "proposer 5 activités", "inventer 3 slogans", "trouver 8 destinations", "faire une mini danse",
+  "raconter 5 blagues", "trouver 7 dates importantes", "faire un duel de regards",
+  "faire 15 high-fives", "inventer un mini rap", "écrire 3 objectifs", "improviser un mini podcast",
+  "mimer 5 films", "dire 12 qualités", "chanter 10 secondes", "faire 10 claps synchronisés", "trouver 8 recettes"
 ];
-
-const minuteVariants = ["pendant 60 secondes", "sans rire", "en rythme"];
+const minuteVariants = ["en 60 secondes", "sans rire", "en rythme", "en duo"];
 const minuteChallenges = sliceTo(
   buildVariants(minuteBase, minuteVariants, (base, variant) => `Défi 1 minute : ${base} ${variant}.`),
+  80
+);
+
+// [7] Quiz couple (80)
+const quizBase = [
+  "son snack préféré", "sa chanson motivation", "son moment préféré de la journée", "sa boisson doudou",
+  "son rituel du matin", "son film doudou", "son endroit feel-good", "son geste de tendresse préféré",
+  "sa saison favorite", "son dessert favori", "sa couleur préférée", "son objet porte-bonheur",
+  "sa sortie préférée", "son talent caché", "sa phrase qui motive", "son type de vacances idéal",
+  "son petit plaisir secret", "son endroit rêvé", "son confort food", "sa série réconfort"
+];
+const quizVariants = ["Quiz duo", "Quiz express", "Quiz surprise", "Quiz rapide"];
+const coupleQuiz = sliceTo(
+  buildVariants(quizBase, quizVariants, (base, variant) => `${variant} : Quel est ${base} ?`),
+  80
+);
+
+// [3] Souvenirs (70)
+const memoryBase = [
+  "notre première rencontre",
+  "notre premier fou rire",
+  "un moment où tu t'es senti(e) compris(e)",
+  "un petit rituel né par hasard",
+  "un moment simple qui t'a marqué",
+  "une surprise qui t'a touché(e)",
+  "une soirée parfaite",
+  "un souvenir de vacances",
+  "un moment où tu étais fier(ère) de nous",
+  "un moment de complicité",
+  "un moment où on a appris quelque chose",
+  "un moment de calme partagé",
+  "un petit geste marquant",
+  "un souvenir d'hiver",
+  "un souvenir d'été",
+  "un moment où on s'est motivé",
+  "un moment où on a improvisé",
+  "un souvenir qui te fait sourire",
+  "un moment qui t'a surpris",
+  "un moment de soutien"
+];
+const memoryVariants = ["Raconte", "Décris", "Partage", "En 3 phrases"];
+const memories = sliceTo(
+  buildVariants(memoryBase, memoryVariants, (base, variant) => `${variant} : ${base}.`),
+  70
+);
+
+// [14] Secrets soft (70)
+const secretsBase = [
+  "un petit rêve de couple",
+  "une chose que tu apprécies en secret",
+  "un geste qui te rassure",
+  "un souvenir que tu veux garder",
+  "un moment où tu as voulu dire merci",
+  "un compliment que tu gardes pour toi",
+  "un endroit où tu veux aller",
+  "un moment où tu t'es senti(e) aligné(e)",
+  "un petit projet à deux",
+  "un geste qui te fait fondre",
+  "un moment où tu as été impressionné(e)",
+  "un moment où tu voulais plus de temps",
+  "un rituel que tu aimerais créer",
+  "un mot doux que tu gardes",
+  "une surprise que tu imagines"
+];
+const secretsVariants = ["Secret doux", "Petit aveu", "Confession tendre", "Aveu simple", "Secret calme"];
+const secretsSoft = sliceTo(
+  buildVariants(secretsBase, secretsVariants, (base, variant) => `${variant} : ${base}.`),
+  70
+);
+const secretsMedium = sliceTo(
+  buildVariants(secretsBase, ["Niveau medium", "Plus profond", "Version medium", "Confidence medium", "Honnête"], (base, variant) => `${variant} : ${base}.`),
+  70
+);
+
+// [13] Blind test parlé (60)
+const blindSubjects = [
+  "un film", "une chanson", "une série", "un plat", "un lieu", "un jeu", "une couleur", "un sport",
+  "une appli", "une boisson", "une saison", "une fête", "un animal", "un métier", "un souvenir"
+];
+const blindForbidden = ["amour", "couple", "toujours", "jamais", "ensemble", "rendez-vous", "voyage", "surprise"];
+const blindTest = sliceTo(
+  blindSubjects.flatMap((subject) =>
+    blindForbidden.slice(0, 4).map((word, idx) => ({
+      subject: `Décris ${subject} sans dire : ${word}, ${blindForbidden[(idx + 1) % blindForbidden.length]}, ${blindForbidden[(idx + 2) % blindForbidden.length]}.`
+    }))
+  ),
+  60
+);
+
+// [19] Émotions (50)
+const emotions = [
+  "joie", "tendresse", "fierté", "nostalgie", "excitation", "apaisement", "surprise", "curiosité",
+  "confiance", "admiration", "gratitude", "complicité", "motivation", "chaleur", "sérénité", "espièglerie",
+  "espoir", "rassurance", "douceur", "émerveillement", "envie", "calme", "optimisme", "audace", "bienveillance"
+];
+const emotionPhrases = [
+  "Quand on se retrouve après une longue journée.",
+  "Quand on prépare un projet ensemble.",
+  "Quand on improvise un plan.",
+  "Quand on se soutient en silence.",
+  "Quand on partage un fou rire."
+];
+const emotionCards = sliceTo(
+  buildVariants(emotions, emotionPhrases, (emotion, phrase) => ({ emotion, phrase })),
   50
 );
 
-const emotionList = [
-  "joie", "tendresse", "fierté", "nostalgie", "excitation", "apaisement", "surprise", "curiosité",
-  "confiance", "admiration", "gratitude", "complicité", "motivation", "chaleur", "sérénité", "espièglerie",
-  "espoir", "rassurance", "douceur", "émerveillement"
-];
-const emotionPhrases = [
-  "Quand tu m'écoutes vraiment.", "Quand on planifie un projet ensemble.", "Quand on se retrouve après une journée chargée.",
-  "Quand on rit des mêmes détails.", "Quand on partage un souvenir.", "Quand on improvise." 
-];
-const emotions = sliceTo(
-  buildVariants(emotionList, emotionPhrases, (emotion, phrase) => ({ emotion, phrase })),
-  40
-);
-
+// [21] Priorités (60)
 const prioritySituations = [
-  "Un samedi libre", "Un budget cadeau limité", "Une soirée spéciale", "Un dimanche matin",
-  "Un voyage de 3 jours", "Un mois chargé", "Un anniversaire surprise", "Un week-end pluvieux",
-  "Une nouvelle tradition", "Une semaine stressante"
+  "Un samedi libre", "Un budget cadeau limité", "Une soirée spéciale", "Un dimanche matin", "Un voyage de 3 jours",
+  "Un mois chargé", "Un week-end pluvieux", "Une nouvelle tradition", "Une semaine stressante", "Un événement surprise"
 ];
 const priorityChoices = [
   ["repos total", "activité créative", "sortie extérieure", "moment surprise"],
@@ -247,19 +308,28 @@ const priorityChoices = [
   ["planifier l'année", "faire une pause", "défi fun", "moment romantique"],
   ["brunch maison", "marché local", "sport doux", "sieste duo"],
   ["aventure nature", "découverte urbaine", "route gourmande", "séjour slow"],
-  ["discussion profonde", "jeu léger", "activité manuelle", "moment silence"],
-  ["cadeau fait main", "cadeau utile", "cadeau expérience", "cadeau surprise"],
-  ["playlist ensemble", "atelier cuisine", "album photo", "plan projet"],
-  ["message surprise", "rituel quotidien", "défi mensuel", "moment improvisé"],
-  ["souvenir partagé", "objectif perso", "objectif couple", "objectif fun"]
+  ["discussion profonde", "jeu léger", "activité manuelle", "moment silence"]
 ];
 const priorities = sliceTo(
   prioritySituations.flatMap((situation, idx) =>
     priorityChoices.map((choices) => ({ situation, choices }))
   ),
-  40
+  60
 );
 
+// [20] Battle créativité (60)
+const creativityThemes = [
+  "inventer un slogan", "créer un logo", "imaginer une affiche de film", "inventer un rituel de nouvel an",
+  "inventer un hashtag", "créer une mini histoire", "proposer un menu spécial", "imaginer un voyage fictif",
+  "créer un toast", "inventer un défi photo", "imaginer un souvenir futur", "créer un bingo couple"
+];
+const creativityVariants = ["Battle express", "Battle fun", "Battle créatif", "Battle surprise", "Battle duo"];
+const creativityBattle = sliceTo(
+  buildVariants(creativityThemes, creativityVariants, (theme, variant) => `${variant} : ${theme}.`),
+  60
+);
+
+// [23] Promesses (60)
 const promiseBase = [
   "organiser une micro-surprise par mois",
   "avoir un moment sans écrans par semaine",
@@ -267,613 +337,425 @@ const promiseBase = [
   "faire une mini balade chaque dimanche",
   "prendre une photo souvenir chaque mois",
   "faire un check-in émotions chaque semaine",
-  "planifier un voyage même court",
-  "dire un compliment sincère par jour",
-  "garder un carnet de souvenirs",
-  "soutenir un défi perso de l'autre",
-  "apprendre une nouvelle chose ensemble",
-  "avoir un rituel de fin de journée",
-  "faire une activité sportive douce ensemble",
-  "organiser une soirée jeux",
-  "déclarer une gratitude quotidienne",
-  "essayer un hobby nouveau",
-  "préparer une playlist commune",
-  "faire une liste de projets",
   "planifier un week-end surprise",
-  "garder un moment de calme partagé"
+  "dire un compliment sincère par jour",
+  "apprendre une nouvelle chose ensemble",
+  "faire une soirée jeux",
+  "préparer une playlist commune",
+  "tenir un carnet de souvenirs"
 ];
-const promiseVariants = ["Promesse 2025 :", "Engagement doux :"];
+const promiseVariants = ["Promesse 2025", "Engagement doux", "Promesse fun", "Pacte du couple", "Promesse simple"];
 const promises = sliceTo(
-  buildVariants(promiseBase, promiseVariants, (base, variant) => `${variant} ${base}.`),
-  40
+  buildVariants(promiseBase, promiseVariants, (base, variant) => `${variant} : ${base}.`),
+  60
 );
 
-const voicesBase = [
-  "narrateur de documentaire", "vendeur(se) de marché", "astronaute", "prof de yoga",
-  "guide touristique", "commentateur sportif", "agent secret", "chef(fe) étoilé(e)",
-  "animateur radio", "magicien(ne)", "hôtesse de l'air", "pirate sympa",
-  "robot bienveillant", "journaliste météo", "poète", "coach de vie",
-  "capitaine de navire", "gardien(ne) de musée", "bibliothécaire", "éclaireur(se)"
+// [24] Voix (60)
+const voiceRoles = [
+  "narrateur de documentaire", "vendeur(se) de marché", "astronaute", "prof de yoga", "guide touristique",
+  "commentateur sportif", "agent secret", "chef(fe) étoilé(e)", "animateur radio", "magicien(ne)",
+  "robot bienveillant", "journaliste météo", "poète", "coach de vie", "capitaine de navire"
 ];
-const voicesStyles = ["hyper enthousiaste", "super calme"];
+const voiceLines = [
+  "Raconte une journée parfaite.",
+  "Présente votre couple comme une mission.",
+  "Décris une surprise romantique.",
+  "Lance une annonce spéciale.",
+  "Donne une consigne amusante."
+];
 const voices = sliceTo(
-  buildVariants(voicesBase, voicesStyles, (base, variant) => `${base} ${variant}`),
-  40
+  buildVariants(voiceRoles, voiceLines, (role, line) => ({ role, line })),
+  60
 );
 
-const memoriesBase = [
-  "Quel est ton premier souvenir clair avec moi ?",
-  "Quel moment t'a fait dire " + '"cette personne compte"' + " ?",
-  "Quel fou rire récent te revient ?",
-  "Quelle petite habitude de couple est née sans qu'on le décide ?",
-  "Quel est ton souvenir préféré de nos vacances ?",
-  "Quel moment t'a surpris chez moi ?",
-  "Quel plat partagé te rappelle un bon moment ?",
-  "Quel trajet ensemble t'a marqué ?",
-  "Quel moment simple t'a fait du bien ?",
-  "Quel message de moi t'a touché(e) ?",
-  "Quel moment de soutien t'a rassuré(e) ?",
-  "Quel souvenir d'hiver te réchauffe ?",
-  "Quel moment a changé notre routine ?",
-  "Quel petit geste te fait sourire ?",
-  "Quel moment de silence était parfait ?",
-  "Quel événement t'a rendu fier(ère) de nous ?",
-  "Quel moment d'impro t'a fait rire ?",
-  "Quel moment a renforcé notre complicité ?",
-  "Quel souvenir spontané t'a marqué ?",
-  "Quel détail de notre début te plaît encore ?",
-  "Quel moment tu raconterais à un ami ?",
-  "Quelle photo raconte bien notre histoire ?",
-  "Quel moment de cuisine a été mémorable ?",
-  "Quelle soirée te ressemble ?",
-  "Quel moment te rappelle pourquoi on s'aime ?"
-];
-const memoriesVariants = ["Version courte", "Version détaillée"];
-const memories = sliceTo(
-  buildVariants(memoriesBase, memoriesVariants, (base, variant) => `${variant} : ${base}`),
-  50
-);
-
-const coupleQuizBase = [
-  "Quel est le snack préféré de l'autre ?",
-  "Quelle chanson l'autre met pour se motiver ?",
-  "Quel est son endroit préféré pour se ressourcer ?",
-  "Quelle est sa saison favorite ?",
-  "Quel compliment il/elle préfère entendre ?",
-  "Quel est son rituel du matin ?",
-  "Quel est son film doudou ?",
-  "Quel est son confort food ?",
-  "Quel est son petit plaisir secret ?",
-  "Quel objet il/elle garde toujours près de lui/elle ?",
-  "Quel est son geste de tendresse préféré ?",
-  "Quel type de sortie le/la rend heureux(se) ?",
-  "Quel est son super-pouvoir social ?",
-  "Quel est son talent caché ?",
-  "Quelle phrase le/la motive ?",
-  "Quel est son endroit rêvé ?",
-  "Quel est son dessert favori ?",
-  "Quelle couleur lui va le mieux ?",
-  "Quel est son moment préféré de la journée ?",
-  "Quelle boisson le/la réconforte ?",
-  "Quel est son rituel du soir ?",
-  "Quelle activité lui donne le sourire ?",
-  "Quelle odeur lui rappelle l'enfance ?",
-  "Quel cadeau le/la surprendrait ?",
-  "Quelle série il/elle peut revoir ?"
-];
-const coupleQuizVariants = ["Quiz duo", "Quiz express"];
-const coupleQuiz = sliceTo(
-  buildVariants(coupleQuizBase, coupleQuizVariants, (base, variant) => `${variant} : ${base}`),
-  50
-);
-
-const secretsBase = [
-  "un petit rêve perso que tu n'as jamais dit",
-  "un endroit que tu aimerais découvrir avec moi",
-  "un moment où tu t'es senti(e) très proche",
-  "une qualité de l'autre que tu sous-estimes",
-  "un geste qui te rassure",
-  "une chanson qui te fait penser à nous",
-  "un moment où tu voulais dire je t'aime",
-  "un détail qui te touche",
-  "un souvenir que tu gardes pour toi",
-  "un rituel que tu aimerais créer",
-  "un compliment que tu penses souvent",
-  "un objectif secret pour l'année",
-  "un moment où tu as été impressionné(e)",
-  "un message que tu gardes",
-  "un petit rêve de couple",
-  "un moment où tu as voulu plus de temps",
-  "un moment où tu t'es senti(e) aligné(e)",
-  "un petit bonheur que tu n'oses pas demander",
-  "une activité que tu veux tester",
-  "un geste qui te fait fondre"
-];
-const secretsVariants = ["Secret doux :", "Petit aveu :"];
-const secretsSoft = sliceTo(
-  buildVariants(secretsBase, secretsVariants, (base, variant) => `${variant} ${base}.`),
-  40
-);
-
-const creativityBase = [
-  "invente un slogan pour votre couple",
-  "crée un nom de mission secrète",
-  "imagine un logo pour votre duo",
-  "propose une affiche de film sur votre histoire",
-  "inventez un rituel de nouvel an",
-  "imagine un message codé",
-  "crée un menu 3 services spécial couple",
-  "inventez une tradition du dimanche",
-  "imagine un voyage fictif",
-  "crée une carte postale",
-  "imagine une playlist en 3 mots",
-  "inventez un défi photo",
-  "crée un bingo couple",
-  "imagine une devise",
-  "inventez une fête perso",
-  "crée un jeu de société rapide",
-  "imagine un souvenir futur",
-  "crée un toast",
-  "inventez un hashtag",
-  "crée une mini-histoire"
-];
-const creativityVariants = ["Battle express :", "Battle fun :"];
-const creativityBattle = sliceTo(
-  buildVariants(creativityBase, creativityVariants, (base, variant) => `${variant} ${base}.`),
-  40
-);
-
-const planYearBase = [
-  "un mini-voyage à planifier",
-  "une compétence à apprendre ensemble",
-  "une habitude positive",
-  "un projet créatif",
-  "une routine bien-être",
-  "un moment mensuel",
-  "un défi sportif doux",
-  "une tradition de couple",
-  "un objectif fun",
-  "un projet gourmand",
-  "une routine de gratitude",
-  "une escapade surprise",
-  "un challenge photo",
-  "une activité culturelle",
-  "une soirée dédiée",
-  "un rituel matinal",
-  "un projet solidaire",
-  "un mini rêve",
-  "un objectif d'organisation",
-  "un souvenir à créer"
-];
-const planYearVariants = ["Plan 2025 :", "Idée à programmer :"];
-const planYear = sliceTo(
-  buildVariants(planYearBase, planYearVariants, (base, variant) => `${variant} ${base}.`),
-  40
-);
-
+// [4] Devine la réponse de l'autre (60)
 const guessOtherBase = [
-  "Quel est ton endroit feel-good ?",
-  "Quel cadeau surprise te ferait sourire ?",
-  "Quel est ton moment préféré avec moi ?",
-  "Quelle est ta phrase d'encouragement favorite ?",
-  "Quel est ton confort food du moment ?",
-  "Quel type de musique te booste ?",
-  "Quel est ton souvenir de couple préféré ?",
   "Quel est ton plan parfait pour samedi ?",
-  "Quelle est ta boisson doudou ?",
-  "Quel est ton rituel du soir ?",
-  "Quel est ton mot du moment ?",
-  "Quel est ton type de vacances ?",
-  "Quel est ton cadeau idéal ?",
-  "Quel est ton spot nature préféré ?",
-  "Quel est ton objet porte-bonheur ?",
-  "Quel est ton film doudou ?",
-  "Quelle est ta meilleure playlist ?",
-  "Quel est ton moment de la journée préféré ?",
-  "Quel est ton plat à partager préféré ?",
-  "Quel est ton mini-rêve 2025 ?"
+  "Quel snack te rend heureux(se) ?",
+  "Quel moment de la journée tu préfères ?",
+  "Quel est ton souvenir préféré avec moi ?",
+  "Quel cadeau te ferait sourire ?",
+  "Quelle musique te booste ?",
+  "Quel est ton endroit feel-good ?",
+  "Quelle boisson doudou ?",
+  "Quel est ton mini rêve 2025 ?",
+  "Quelle activité te détend le plus ?"
 ];
-const guessOtherVariants = ["Devine :", "Double devinette :"];
+const guessOtherVariants = ["Devine :", "Double devinette :", "Télépathie :", "Mini quiz :", "Question surprise :", "Choix secret :"];
 const guessOther = sliceTo(
   buildVariants(guessOtherBase, guessOtherVariants, (base, variant) => `${variant} ${base}`),
-  40
+  60
 );
 
-const whoLiesBase = [
+// [16] Qui ment ? (60)
+const liePhrases = [
   "J'ai déjà oublié notre premier rendez-vous.",
   "J'ai déjà chanté faux en public.",
-  "J'ai déjà fait un faux rire en famille.",
-  "J'ai déjà envoyé un message au mauvais contact.",
   "J'ai déjà planifié une surprise.",
+  "J'ai déjà envoyé un message au mauvais contact.",
   "J'ai déjà dormi devant un film romantique.",
-  "J'ai déjà oublié une date importante.",
   "J'ai déjà écrit une lettre d'amour.",
   "J'ai déjà inventé une excuse mignonne.",
-  "J'ai déjà fait un compliment en rime.",
   "J'ai déjà improvisé un rendez-vous.",
-  "J'ai déjà eu un fou rire en réunion.",
-  "J'ai déjà mangé le dernier morceau.",
-  "J'ai déjà fait un selfie raté.",
-  "J'ai déjà oublié mes clés.",
-  "J'ai déjà fait une playlist secrète.",
   "J'ai déjà pris trop de photos.",
-  "J'ai déjà lu un horoscope amoureux.",
-  "J'ai déjà préparé un petit déjeuner surprise.",
-  "J'ai déjà fait un plan trop ambitieux."
+  "J'ai déjà fait un selfie raté."
 ];
-const whoLiesVariants = ["Vérité ou mensonge ?", "Qui ment ?"];
 const whoLies = sliceTo(
-  buildVariants(whoLiesBase, whoLiesVariants, (base, variant) => `${variant} ${base}`),
-  40
+  liePhrases.flatMap((phrase) =>
+    liePhrases.map((phraseB) => ({ phraseA: phrase, phraseB }))
+  ),
+  60
 );
 
-const blindTestBase = [
-  "Décris un film sans dire le titre.",
-  "Décris une chanson sans dire les mots.",
-  "Décris un lieu de rendez-vous idéal.",
-  "Décris une série en 3 indices.",
-  "Décris un souvenir en une métaphore.",
-  "Décris un dessert sans le nommer.",
-  "Décris un objet du quotidien sans le dire.",
-  "Décris un jeu de société sans son nom.",
-  "Décris une émotion avec un paysage.",
-  "Décris une activité du week-end.",
-  "Décris un personnage célèbre.",
-  "Décris une appli sans l'indiquer.",
-  "Décris un sport sans le nom.",
-  "Décris une boisson.",
-  "Décris une couleur avec des objets.",
-  "Décris une tenue idéale.",
-  "Décris un moment de la journée.",
-  "Décris une saison.",
-  "Décris une fête.",
-  "Décris un animal de compagnie."
+// [9] Compliments forcés (60)
+const complimentThemes = [
+  "le style", "l'humour", "l'écoute", "la créativité", "la patience", "la gentillesse", "l'énergie",
+  "la capacité à surprendre", "la douceur", "l'organisation", "le sourire", "les yeux", "la voix", "le courage", "le soutien"
 ];
-const blindTestVariants = ["Blind test parlé :", "Décris sans dire :"];
-const blindTest = sliceTo(
-  buildVariants(blindTestBase, blindTestVariants, (base, variant) => `${variant} ${base}`),
-  40
-);
-
-const complimentsBase = [
-  "Fais un compliment sur le style de l'autre.",
-  "Complimente sa façon de parler.",
-  "Complimente son énergie.",
-  "Complimente son sens de l'humour.",
-  "Complimente sa patience.",
-  "Complimente son regard.",
-  "Complimente son écoute.",
-  "Complimente sa créativité.",
-  "Complimente son organisation.",
-  "Complimente sa gentillesse.",
-  "Complimente sa capacité à rassurer.",
-  "Complimente un souvenir partagé.",
-  "Complimente sa façon de sourire.",
-  "Complimente sa manière de rêver.",
-  "Complimente sa capacité à surprendre.",
-  "Complimente sa détermination.",
-  "Complimente un talent caché.",
-  "Complimente son optimisme.",
-  "Complimente sa douceur.",
-  "Complimente son esprit d'équipe."
-];
-const complimentsVariants = ["Compliment forcé :", "Mode douceur :"];
+const complimentVariants = ["Compliment forcé", "Mission douceur", "Compliment flash", "Défi compliment"];
 const compliments = sliceTo(
-  buildVariants(complimentsBase, complimentsVariants, (base, variant) => `${variant} ${base}`),
-  40
+  buildVariants(complimentThemes, complimentVariants, (theme, variant) => `${variant} : Complimente ${theme}.`),
+  60
 );
 
-const trialCasesBase = [
-  "Avoir mangé le dernier biscuit.",
-  "Avoir oublié un message important.",
-  "Avoir monopoliser la couette.",
-  "Avoir laissé traîner une tasse.",
-  "Avoir chanté trop fort.",
-  "Avoir pris trop de place sur le canapé.",
-  "Avoir oublié la liste de courses.",
-  "Avoir fait une blague trop nulle.",
-  "Avoir tardé à répondre.",
-  "Avoir insisté pour un film en particulier.",
-  "Avoir mis la mauvaise playlist.",
-  "Avoir mis du temps à se préparer.",
-  "Avoir choisi une mauvaise série.",
-  "Avoir mangé plus de frites.",
-  "Avoir mis un réveil trop tôt."
-];
+// [8] Procès (60)
 const trialCases = sliceTo(
-  buildVariants(trialCasesBase, ["Procès", "Tribunal"], (base, variant) => `${variant} du couple : ${base}`),
-  30
+  buildVariants(
+    ["Avoir mangé le dernier biscuit", "Avoir oublié un message important", "Avoir monopolisé la couette", "Avoir mis la mauvaise playlist", "Avoir laissé traîner une tasse", "Avoir chanté trop fort", "Avoir tardé à répondre", "Avoir choisi une mauvaise série", "Avoir pris plus de frites", "Avoir insisté pour un film"],
+    ["Affaire", "Dossier", "Procès", "Tribunal", "Accusation", "Audience"],
+    (base, variant) => `${variant} : ${base}.`
+  ),
+  60
 );
+
+// [17] Planifier l'année (60)
+const planCategories = ["Défi", "Sortie", "Routine", "Surprise", "Projet", "Habitude"];
+const planIdeas = [
+  "un mini-voyage à planifier", "une compétence à apprendre", "une tradition mensuelle", "un projet créatif",
+  "une routine bien-être", "un moment mensuel", "un défi sportif doux", "une sortie culturelle",
+  "un projet gourmand", "une activité solidaire"
+];
+const planYear = sliceTo(
+  buildVariants(planIdeas, planCategories, (idea, category) => ({ category, idea })),
+  60
+);
+
+// [19] Devine l'émotion (50) is emotionCards above
 
 const DATA = {
-  categories: ["Fun", "Romance", "Défis", "Parole"],
-  games: [
+  tags: ["Fun", "Romance", "Défis", "Parole"],
+  siteGames: [
     {
       id: "1",
-      title: "Qui de nous deux ?",
-      category: "Fun",
+      name: "Qui de nous deux ?",
       description: "Comparez vos traits avec humour.",
+      tags: ["Fun", "Parole"],
+      duration: "libre",
       rules: [
-        "Lisez la question.",
-        "Comptez 3, pointez la personne.",
-        "Celui/celle qui reçoit le plus de points gagne le tour."
+        "Lisez la carte.",
+        "Choisissez A, B ou Égalité.",
+        "Option Tirage au sort pour départager.",
+        "+1 point automatique si A ou B est choisi."
       ],
-      dataKey: "whoOfUs",
-      hasTimer: false
+      type: "who"
     },
     {
       id: "2",
-      title: "Vérité ou gage intelligent",
-      category: "Parole",
-      description: "Des vérités soft et des gages doux.",
+      name: "Vérité ou gage",
+      description: "Questions soft ou défis rapides.",
+      tags: ["Parole", "Défis"],
+      duration: "60s",
       rules: [
         "Choisissez Vérité ou Gage.",
         "Répondez avec sincérité.",
-        "Pas de malaise, on reste bienveillant."
+        "Pour un gage, lancez le timer 60s.",
+        "Réussi ou Raté pour marquer si besoin."
       ],
-      dataKey: "truthOrDare",
-      hasTimer: false
+      type: "truthOrDare"
     },
     {
       id: "3",
-      title: "Le jeu des souvenirs",
-      category: "Romance",
-      description: "Réveillez les moments forts.",
+      name: "Le jeu des souvenirs",
+      description: "Questions pour se remémorer le meilleur.",
+      tags: ["Romance", "Parole"],
+      duration: "libre",
       rules: [
         "Tirez une question souvenir.",
-        "Racontez en détails.",
-        "L'autre ajoute un souvenir complémentaire."
+        "Répondez tour à tour si souhaité.",
+        "Utilisez Sauver ce souvenir si vous l'adorez."
       ],
-      dataKey: "memories",
-      hasTimer: false
+      type: "memories"
     },
     {
       id: "4",
-      title: "Devine la réponse de l'autre",
-      category: "Fun",
+      name: "Devine la réponse de l'autre",
       description: "Testez votre télépathie.",
+      tags: ["Fun", "Parole"],
+      duration: "libre",
       rules: [
-        "L'un répond mentalement.",
-        "L'autre devine.",
-        "Comparez et marquez un point si c'est juste."
+        "A devine la réponse.",
+        "B répond.",
+        "Match = +1 compatibilité.",
+        "Pas match = continuez."
       ],
-      dataKey: "guessOther",
-      hasTimer: false
+      type: "guessOther"
     },
     {
       id: "5",
-      title: "Débat absurde",
-      category: "Fun",
+      name: "Débat absurde",
       description: "Défendez des idées improbables.",
+      tags: ["Fun", "Défis"],
+      duration: "120s",
       rules: [
         "Tirez un sujet absurde.",
-        "1 minute pour préparer vos arguments.",
-        "Le public (vous deux) vote le gagnant."
+        "Attribuez Pour / Contre au hasard.",
+        "Timer 120s.",
+        "Verdict A/B/Égalité."
       ],
-      dataKey: "absurdDebates",
-      hasTimer: true
+      type: "debate"
     },
     {
       id: "7",
-      title: "Quiz de couple personnalisé",
-      category: "Parole",
-      description: "Montrez que vous vous connaissez.",
+      name: "Quiz de couple",
+      description: "Prouvez que vous vous connaissez.",
+      tags: ["Parole"],
+      duration: "libre",
       rules: [
-        "Répondez chacun de votre côté.",
-        "Comparez les réponses.",
-        "Un point si vous tombez d'accord."
+        "Chacun répond.",
+        "Même réponse = +1 compatibilité.",
+        "Continuez pour un score final."
       ],
-      dataKey: "coupleQuiz",
-      hasTimer: false
+      type: "coupleQuiz"
     },
     {
       id: "8",
-      title: "Le procès",
-      category: "Fun",
-      description: "Un mini-tribunal ultra drôle.",
+      name: "Le procès",
+      description: "Un mini tribunal du couple.",
+      tags: ["Fun", "Parole"],
+      duration: "libre",
       rules: [
-        "Tirez une accusation.",
-        "Choisissez un juge au hasard.",
-        "Le juge tranche ou tire au sort."
+        "Tirez une affaire.",
+        "Accusation 30s, défense 30s.",
+        "Verdict vote ou aléatoire.",
+        "Score optionnel."
       ],
-      dataKey: "trialCases",
-      hasTimer: false
+      type: "trial"
     },
     {
       id: "9",
-      title: "Compliments forcés",
-      category: "Romance",
+      name: "Compliments forcés",
       description: "Des compliments obligatoires.",
+      tags: ["Romance"],
+      duration: "libre",
       rules: [
-        "Tirez une mission de compliment.",
-        "Restez sincères et précis.",
-        "L'autre répond par un merci ou un bisou."
+        "Tirez une mission.",
+        "Complimentez en vrai.",
+        "Validez et passez au suivant."
       ],
-      dataKey: "compliments",
-      hasTimer: false
+      type: "compliments"
     },
     {
       id: "10",
-      title: "Tu préfères… version couple",
-      category: "Fun",
-      description: "Faites des choix impossibles.",
+      name: "Tu préfères…",
+      description: "Choix impossibles version couple.",
+      tags: ["Fun"],
+      duration: "libre",
       rules: [
         "Choisissez A ou B.",
-        "Expliquez votre choix.",
-        "Celui/celle qui convainc gagne le point."
+        "Indiquez si vous êtes d'accord.",
+        "Bouton Pourquoi pour expliquer."
       ],
-      dataKey: "wouldYouRather",
-      hasTimer: false
+      type: "wouldYouRather"
     },
     {
       id: "12",
-      title: "Impro théâtre",
-      category: "Défis",
-      description: "Improvisations guidées et fun.",
+      name: "Impro théâtre",
+      description: "Impro guidée en duo.",
+      tags: ["Défis", "Fun"],
+      duration: "120s",
       rules: [
-        "Tirez un rôle, lieu et twist.",
-        "Improvisation 45 secondes.",
-        "Changez de rôles au prochain tour."
+        "Tirez rôle A, rôle B, lieu, twist.",
+        "Timer 120s.",
+        "Nouvelle scène pour recommencer."
       ],
-      dataKey: "improvCards",
-      hasTimer: true
+      type: "improv"
     },
     {
       id: "13",
-      title: "Blind test parlé",
-      category: "Défis",
-      description: "Décris sans dire le nom.",
+      name: "Blind test parlé",
+      description: "Décris sans dire les mots interdits.",
+      tags: ["Défis"],
+      duration: "60s",
       rules: [
-        "Tirez une carte.",
-        "Décrivez sans mots interdits.",
-        "L'autre doit deviner en 60s."
+        "Décrivez le sujet.",
+        "Évitez les mots interdits.",
+        "Trouvé ou pas trouvé."
       ],
-      dataKey: "blindTest",
-      hasTimer: true
+      type: "blindTest"
     },
     {
       id: "14",
-      title: "Secrets soft",
-      category: "Romance",
-      description: "Des confidences douces.",
+      name: "Secrets soft",
+      description: "Confidences safe et douces.",
+      tags: ["Romance", "Parole"],
+      duration: "libre",
       rules: [
-        "Tirez un secret.",
-        "Partagez en toute bienveillance.",
-        "L'autre répond avec un mot doux."
+        "Choisissez un niveau.",
+        "Partagez en douceur.",
+        "Passer est toujours ok."
       ],
-      dataKey: "secretsSoft",
-      hasTimer: false
+      type: "secrets"
     },
     {
       id: "15",
-      title: "Challenge 1 minute",
-      category: "Défis",
-      description: "Des défis express à deux.",
+      name: "Challenge 1 minute",
+      description: "Défis express en duo.",
+      tags: ["Défis"],
+      duration: "60s",
       rules: [
         "Tirez un défi.",
-        "Lancez le timer 60s.",
-        "Faites équipe pour réussir."
+        "Timer automatique 60s.",
+        "Réussi ou Raté."
       ],
-      dataKey: "minuteChallenges",
-      hasTimer: true
+      type: "minuteChallenge"
     },
     {
       id: "16",
-      title: "Qui ment ?",
-      category: "Fun",
-      description: "Vérité ou mensonge ?",
+      name: "Qui ment ?",
+      description: "Deux phrases, une seule vraie.",
+      tags: ["Fun", "Parole"],
+      duration: "libre",
       rules: [
-        "Lisez la phrase.",
-        "L'un dit vrai, l'autre ment.",
-        "Devinez qui ment."
+        "A parle, B devine.",
+        "Puis B parle, A devine.",
+        "Choisissez Phrase 1 ou 2."
       ],
-      dataKey: "whoLies",
-      hasTimer: false
+      type: "whoLies"
     },
     {
       id: "17",
-      title: "Planifier l'année à venir",
-      category: "Parole",
-      description: "Projets et intentions 2025.",
+      name: "Planifier l'année à venir",
+      description: "Projets 2025 à garder.",
+      tags: ["Parole"],
+      duration: "libre",
       rules: [
-        "Tirez une idée.",
-        "Décidez d'une action concrète.",
-        "Notez-la si vous l'aimez."
+        "Tirez une carte.",
+        "Garder ou Skip.",
+        "Liste sauvegardée."
       ],
-      dataKey: "planYear",
-      hasTimer: false
+      type: "planYear"
     },
     {
       id: "19",
-      title: "Devine l'émotion",
-      category: "Défis",
-      description: "Mettez en scène une émotion.",
+      name: "Devine l'émotion",
+      description: "Jouez une émotion sans la dire.",
+      tags: ["Défis", "Fun"],
+      duration: "60s",
       rules: [
-        "Tirez une émotion et une phrase.",
-        "Jouez-la sans dire l'émotion.",
+        "Lisez la phrase.",
+        "Un lecteur voit l'émotion.",
         "L'autre devine."
       ],
-      dataKey: "emotions",
-      hasTimer: true
+      type: "emotion"
     },
     {
       id: "20",
-      title: "Battle de créativité",
-      category: "Défis",
-      description: "Qui est le plus créatif ?",
+      name: "Battle de créativité",
+      description: "Votez le plus créatif.",
+      tags: ["Défis"],
+      duration: "60s",
       rules: [
-        "Tirez une mission créative.",
-        "Vous avez 60s chacun.",
-        "Votez pour votre favori."
+        "Tirez un thème.",
+        "Timer 60s.",
+        "Vote A/B/Égalité."
       ],
-      dataKey: "creativityBattle",
-      hasTimer: true
+      type: "creativity"
     },
     {
       id: "21",
-      title: "Le jeu des priorités",
-      category: "Parole",
-      description: "Choisissez ensemble le plus important.",
+      name: "Le jeu des priorités",
+      description: "Choisissez l'option la plus importante.",
+      tags: ["Parole"],
+      duration: "libre",
       rules: [
         "Tirez une situation.",
-        "Classez les 4 choix.",
-        "Comparez vos priorités."
+        "Chacun choisit.",
+        "Même choix ou différent."
       ],
-      dataKey: "priorities",
-      hasTimer: false
+      type: "priorities"
     },
     {
       id: "23",
-      title: "Promesses 2025",
-      category: "Romance",
-      description: "Fixez vos engagements doux.",
+      name: "Promesses",
+      description: "Engagements fun ou romantiques.",
+      tags: ["Romance", "Parole"],
+      duration: "libre",
       rules: [
         "Tirez une promesse.",
-        "Adoptez-la ou adaptez-la.",
-        "Célébrez si vous êtes d'accord."
+        "Garder ou Skip.",
+        "Liste sauvegardée."
       ],
-      dataKey: "promises",
-      hasTimer: false
+      type: "promises"
     },
     {
       id: "24",
-      title: "Le jeu des voix",
-      category: "Fun",
-      description: "Parlez avec des voix folles.",
+      name: "Le jeu des voix",
+      description: "Personnages et phrases à jouer.",
+      tags: ["Fun", "Défis"],
+      duration: "60s",
       rules: [
-        "Tirez un personnage.",
-        "Parlez 30s avec cette voix.",
-        "L'autre doit deviner le personnage."
+        "Tirez une voix.",
+        "A joue, puis B joue.",
+        "Vote meilleur acteur."
       ],
-      dataKey: "voices",
-      hasTimer: true
+      type: "voices"
     }
   ],
-  chatgptGames: [
+  vocalGames: [
     {
       id: "6",
-      title: "Histoire interactive",
-      prompt: "Joue le rôle d'un narrateur interactif. Propose une histoire romantique et pose des choix aux joueurs toutes les 2 minutes."
+      name: "Histoire interactive",
+      description: "Une histoire guidée avec choix A/B.",
+      tags: ["Romance", "Parole"],
+      duration: "libre",
+      rules: ["Ouvre ChatGPT en mode vocal et lis le texte ci-dessous."],
+      text: "Tu es un narrateur. Crée une histoire interactive pour un couple, en 10 étapes maximum. À chaque étape, propose deux choix simples A ou B. Le ton doit être drôle, romantique et léger. Ne sois jamais vulgaire. Attends notre choix avant de continuer."
     },
     {
       id: "11",
-      title: "Escape game vocal",
-      prompt: "Crée un mini escape game vocal pour deux joueurs, avec énigmes simples et ambiance fun."
+      name: "Escape game vocal",
+      description: "Énigmes simples en duo.",
+      tags: ["Défis", "Parole"],
+      duration: "libre",
+      rules: ["Ouvre ChatGPT en mode vocal et lis le texte ci-dessous."],
+      text: "Tu es le maître d’un escape game. Décris une pièce dans laquelle nous sommes enfermés. Notre objectif est de sortir en résolvant des énigmes simples. Réponds uniquement à nos actions ou questions. Ne donne jamais la solution directement."
     },
     {
       id: "18",
-      title: "Scénarios alternatifs",
-      prompt: "Invente des scénarios alternatifs de notre histoire et propose des choix humoristiques."
+      name: "Scénarios alternatifs",
+      description: "Des “Et si…” surprenants.",
+      tags: ["Fun", "Parole"],
+      duration: "libre",
+      rules: ["Ouvre ChatGPT en mode vocal et lis le texte ci-dessous."],
+      text: "Propose 8 scénarios ‘Et si…’ pour un couple. Nous en choisissons un, puis tu fais vivre la scène comme une histoire interactive avec des choix."
     },
     {
       id: "22",
-      title: "Conseiller amoureux",
-      prompt: "Agis comme un coach relationnel bienveillant et propose des idées d'amélioration du quotidien en couple."
+      name: "Conseiller amoureux",
+      description: "Coaching bienveillant en duo.",
+      tags: ["Romance", "Parole"],
+      duration: "libre",
+      rules: ["Ouvre ChatGPT en mode vocal et lis le texte ci-dessous."],
+      text: "Tu es un coach de couple bienveillant. Pose-nous quelques questions pour mieux nous comprendre, puis donne des conseils concrets et positifs. Termine par un petit exercice simple à faire ensemble."
     },
     {
       id: "25",
-      title: "Fin alternative de film",
-      prompt: "Donne des fins alternatives drôles à des films romantiques connus, avec choix pour le couple."
+      name: "Fin alternative de film",
+      description: "Un twist final pour votre film.",
+      tags: ["Fun", "Parole"],
+      duration: "libre",
+      rules: ["Ouvre ChatGPT en mode vocal et lis le texte ci-dessous."],
+      text: "Donne une fin alternative au film ou à la série que nous allons te citer. Raconte-la comme une vraie scène avec des émotions et un twist final."
     }
   ],
   data: {
@@ -884,19 +766,20 @@ const DATA = {
     absurdDebates,
     improvCards,
     minuteChallenges,
-    emotions,
+    coupleQuiz,
+    memories,
+    secretsSoft,
+    secretsMedium,
+    blindTest,
+    emotionCards,
     priorities,
+    creativityBattle,
     promises,
     voices,
-    memories,
-    coupleQuiz,
-    secretsSoft,
-    creativityBattle,
-    planYear,
     guessOther,
     whoLies,
-    blindTest,
     compliments,
-    trialCases
+    trialCases,
+    planYear
   }
 };

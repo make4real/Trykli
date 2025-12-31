@@ -1,32 +1,31 @@
-# Couple New Year Games
+# Trykli — Jeux de couple
 
-Site web statique (HTML/CSS/JS) prêt pour GitHub Pages ou Netlify. Aucun backend, aucune dépendance externe, tout fonctionne hors ligne.
+Site web statique 100% HTML/CSS/JS. Tout fonctionne hors ligne, sans dépendance, compatible Netlify et GitHub Pages.
 
-## Lancement local
-Deux options simples :
+## Lancer localement
+- Ouvrir `index.html` directement dans un navigateur.
+- Ou lancer un petit serveur local :
+  ```bash
+  python -m http.server 8080
+  ```
+  Puis ouvrir http://localhost:8080.
 
-1. **Ouvrir directement** `index.html` dans votre navigateur.
-2. **Lancer un petit serveur local** (recommandé) :
-   ```bash
-   python -m http.server 8080
-   ```
-   Puis ouvrir http://localhost:8080.
-
-## Déploiement Netlify (drag & drop)
-1. Allez sur Netlify.
-2. Glissez-déposez le dossier racine du projet.
-3. Aucun build requis, le site est prêt.
+## Déploiement Netlify (auto)
+1. Glisser-déposer le dossier racine du projet dans Netlify.
+2. Le fichier `_redirects` est déjà fourni pour la SPA.
+3. Associez le domaine **trykli.com** dans la configuration Netlify si besoin.
 
 ## Déploiement GitHub Pages
 1. Poussez le repo sur GitHub (branche `main`).
 2. Dans **Settings → Pages**, sélectionnez :
    - Source : `main`
-   - Dossier : `/root` (racine)
-3. Enregistrez, GitHub Pages publie automatiquement.
+   - Dossier : `/root`
+3. Le site est publié automatiquement.
 
 ## Structure
-- `/index.html` : page unique (SPA)
+- `/index.html` : SPA principale
 - `/assets/style.css` : styles
-- `/assets/app.js` : logique interactive
+- `/assets/app.js` : logique
 - `/assets/data.js` : toutes les cartes/questions/jeux
-- `/favicon.svg` : favicon optionnelle
+- `/_redirects` : redirection SPA
+- `/favicon.svg` : icône

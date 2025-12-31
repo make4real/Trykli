@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Couple New Year Games</title>
+  <title>Trykli — Jeux de couple</title>
   <link rel="stylesheet" href="assets/style.css" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 </head>
@@ -12,31 +12,35 @@
     <div class="brand">
       <div class="logo">✨</div>
       <div>
-        <h1>Couple New Year Games</h1>
-        <p>20 mini-jeux pour se marrer, se rapprocher et commencer l'année en beauté.</p>
+        <h1>Trykli</h1>
+        <p>Jeux de couple</p>
       </div>
     </div>
     <div class="top-actions">
-      <button class="ghost" id="randomGameBtn">Mode aléatoire</button>
-      <button class="ghost" id="toggleThemeBtn">Thème</button>
+      <button class="ghost" id="randomSiteBtn">Jeu aléatoire (site)</button>
+      <button class="ghost" id="randomVocalBtn">Jeu aléatoire (vocal)</button>
     </div>
   </header>
 
   <main class="container">
     <section id="homeView" class="view active">
       <div class="controls">
-        <div class="search">
-          <input type="text" id="searchInput" placeholder="Rechercher un jeu, une ambiance..." />
-        </div>
-        <div class="filters" id="filters"></div>
+        <input type="text" id="searchInput" placeholder="Rechercher un jeu, un tag..." />
+        <div id="filters" class="filters"></div>
       </div>
 
-      <section class="grid" id="gameGrid"></section>
+      <section class="section-block">
+        <div class="section-header">
+          <h2>Jeux jouables sur le site (20)</h2>
+        </div>
+        <div class="grid" id="siteGameGrid"></div>
+      </section>
 
-      <section class="chatgpt-block">
-        <h2>À jouer en vocal avec ChatGPT</h2>
-        <p>Ces formats sont prévus pour une version vocale assistée. Copiez le prompt et lancez-les en vocal.</p>
-        <div class="chatgpt-list" id="chatgptList"></div>
+      <section class="section-block">
+        <div class="section-header">
+          <h2>Jeux à jouer avec ChatGPT en mode vocal (5)</h2>
+        </div>
+        <div class="grid" id="vocalGameGrid"></div>
       </section>
     </section>
 
@@ -45,34 +49,39 @@
         <button class="ghost" id="backHomeBtn">← Retour accueil</button>
         <div>
           <h2 id="gameTitle"></h2>
-          <p id="gameCategory"></p>
+          <p id="gameMeta"></p>
         </div>
         <div class="game-actions">
-          <button class="primary" id="newRoundBtn">Nouveau tour</button>
+          <button class="primary" id="newBtn">Nouveau</button>
           <button class="ghost" id="passBtn">Passer</button>
         </div>
       </div>
 
       <div class="game-layout">
-        <section class="game-panel">
-          <h3>Règles ultra simples</h3>
-          <ul id="gameRules"></ul>
-          <div class="timer" id="timerBlock">
-            <span id="timerLabel">60s</span>
-            <button class="ghost" id="timerBtn">Timer 60s</button>
+        <section class="panel">
+          <h3>Règles</h3>
+          <ul id="rulesList"></ul>
+          <div class="timer">
+            <div>
+              <strong>Timer</strong>
+              <span id="timerLabel">60s</span>
+            </div>
+            <div class="timer-actions">
+              <button class="ghost" id="timerStartBtn">Start</button>
+              <button class="ghost" id="timerStopBtn">Stop</button>
+              <button class="ghost" id="timerResetBtn">Reset</button>
+            </div>
           </div>
         </section>
 
-        <section class="game-panel">
+        <section class="panel">
           <h3>Carte / Question</h3>
-          <div class="card" id="cardDisplay"></div>
-          <label class="toggle">
-            <input type="checkbox" id="rapidModeToggle" />
-            <span>Mode rapide (enchaîne automatiquement)</span>
-          </label>
+          <div id="cardDisplay" class="card"></div>
+          <div id="extraDisplay" class="extra"></div>
+          <div id="gameControls" class="controls-grid"></div>
         </section>
 
-        <section class="game-panel">
+        <section class="panel">
           <h3>Score</h3>
           <div class="scoreboard">
             <div>
@@ -95,16 +104,17 @@
           <button class="ghost" id="resetScoreBtn">Reset score</button>
         </section>
 
-        <section class="game-panel">
-          <h3>Historique (10 dernières)</h3>
+        <section class="panel">
+          <h3>Historique (10 derniers)</h3>
           <ol id="historyList"></ol>
+          <div id="savedList" class="saved"></div>
         </section>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>Fait pour les couples qui veulent démarrer 2025 avec énergie et complicité.</p>
+    <p>Trykli — démarrez 2025 avec humour, complicité et des petits défis à deux.</p>
   </footer>
 
   <script src="assets/data.js"></script>
