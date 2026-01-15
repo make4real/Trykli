@@ -1,0 +1,18 @@
+{
+  "name": "trykli",
+  "version": "1.0.0",
+  "description": "Trykli .io strategy prototype per GDD.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "serve": "node server.js",
+    "build": "echo 'Static build - assets in public directory'",
+    "lint": "echo 'No lint configured'"
+  },
+  "keywords": ["io", "strategy", "websocket", "canvas"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}
