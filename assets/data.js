@@ -446,6 +446,20 @@ const DATA = {
   tags: ["Fun", "Romance", "Défis", "Parole"],
   siteGames: [
     {
+      id: "26",
+      name: "Morpion duo",
+      description: "Un morpion rapide à deux.",
+      tags: ["Fun", "Défis"],
+      duration: "60s",
+      rules: [
+        "A joue avec ❌, B avec ⭕.",
+        "Chacun joue à tour de rôle.",
+        "3 alignés = victoire.",
+        "Reset pour relancer une manche."
+      ],
+      type: "ticTacToe"
+    },
+    {
       id: "1",
       name: "Qui de nous deux ?",
       description: "Comparez vos traits avec humour.",

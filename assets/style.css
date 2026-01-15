@@ -250,6 +250,32 @@ button.primary:hover {
   min-height: 24px;
 }
 
+.tic-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+  margin-top: 0.8rem;
+}
+
+.tic-cell {
+  background: var(--panel-light);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  height: 70px;
+  font-size: 1.6rem;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.15s ease, border 0.15s ease;
+}
+
+.tic-cell:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+}
+
 .controls-grid {
   display: grid;
   gap: 0.6rem;

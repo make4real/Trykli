@@ -23,7 +23,8 @@ const state = {
   step: {
     guessOther: "A",
     priorities: { stage: "A", choiceA: null },
-    emotionRevealed: false
+    emotionRevealed: false,
+    ticTacToe: { board: Array(9).fill(""), current: "A", winner: null }
   }
 };
 
@@ -227,7 +228,8 @@ const setGameView = (game, source) => {
   state.step = {
     guessOther: "A",
     priorities: { stage: "A", choiceA: null },
-    emotionRevealed: false
+    emotionRevealed: false,
+    ticTacToe: { board: Array(9).fill(""), current: "A", winner: null }
   };
   el.historyList.innerHTML = "";
   el.homeView.classList.remove("active");
@@ -255,6 +257,10 @@ const renderCard = () => {
 
   let result;
   switch (game.type) {
+    case "ticTacToe":
+      result = { text: "Aligner 3 symboles pour gagner.", item: null };
+      state.step.ticTacToe = { board: Array(9).fill(""), current: "A", winner: null };
+      break;
     case "who":
       result = drawUnique(game.id, DATA.data.whoOfUs, (item) => item);
       break;
@@ -729,6 +735,20 @@ const buildControls = () => {
         el.extraDisplay.textContent = `Vote : ${vote.toUpperCase()}`;
       });
       break;
+    case "ticTacToe":
+      el.cardDisplay.textContent = "Morpion : A = ❌, B = ⭕.";
+      el.extraDisplay.textContent = "Tour de A";
+      el.gameControls.innerHTML = `
+        <div class="tic-board" id="ticBoard"></div>
+        <button class="ghost" id="resetTicBtn">Reset plateau</button>
+      `;
+      document.getElementById("resetTicBtn").addEventListener("click", () => {
+        state.step.ticTacToe = { board: Array(9).fill(""), current: "A", winner: null };
+        el.extraDisplay.textContent = "Tour de A";
+        renderTicTacToe();
+      });
+      renderTicTacToe();
+      break;
     default:
       break;
   }
@@ -788,6 +808,58 @@ const renderPriorityButtons = () => {
       state.step.priorities = { stage: "A", choiceA: null };
     }
   });
+};
+
+const checkTicTacToe = (board) => {
+  const lines = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6]
+  ];
+  for (const [a, b, c] of lines) {
+    if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+      return board[a];
+    }
+  }
+  if (board.every((cell) => cell)) return "draw";
+  return null;
+};
+
+const renderTicTacToe = () => {
+  const boardWrap = document.getElementById("ticBoard");
+  if (!boardWrap) return;
+  boardWrap.innerHTML = state.step.ticTacToe.board
+    .map((cell, index) => `<button class="tic-cell" data-index="${index}">${cell}</button>`)
+    .join("");
+  boardWrap.onclick = (event) => {
+    const btn = event.target.closest("button[data-index]");
+    if (!btn) return;
+    const index = Number(btn.dataset.index);
+    const current = state.step.ticTacToe;
+    if (current.board[index] || current.winner) return;
+    const symbol = current.current === "A" ? "❌" : "⭕";
+    current.board[index] = symbol;
+    const winner = checkTicTacToe(current.board);
+    current.winner = winner;
+    renderTicTacToe();
+    if (winner === "draw") {
+      el.extraDisplay.textContent = "Égalité !";
+      return;
+    }
+    if (winner) {
+      const player = winner === "❌" ? "A" : "B";
+      updateScore(player, "plus");
+      el.extraDisplay.textContent = `Victoire ${player} !`;
+      return;
+    }
+    current.current = current.current === "A" ? "B" : "A";
+    el.extraDisplay.textContent = `Tour de ${current.current}`;
+  };
 };
 
 const updateScore = (player, action) => {
