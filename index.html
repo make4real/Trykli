@@ -1,42 +1,76 @@
 <!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Checklist légère pour suivre l'avancement SoundKey V2." />
-  <title>SoundKey — Suivi d’avancement</title>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="assets/app.css" />
-</head>
-<body>
-  <main class="container">
-    <header class="header">
-      <h1>SoundKey — Suivi d’avancement</h1>
-      <p class="subtitle">Checklist projet V2 (statique, locale, rapide)</p>
-    </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SoundKey Tasks</title>
+    <link rel="stylesheet" href="assets/app.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="header card">
+        <div>
+          <h1>SoundKey Task Tracker</h1>
+          <p class="muted">Suivi local, sans dépendances, 100% offline après chargement.</p>
+        </div>
+        <div class="progress-wrap">
+          <div class="progress-meta" id="progressText">0% · 0/0</div>
+          <div class="progress-bar" aria-hidden="true">
+            <div id="progressFill"></div>
+          </div>
+        </div>
+      </header>
 
-    <section class="progress-card" aria-live="polite">
-      <div class="progress-meta">
-        <strong id="progressPercent">0%</strong>
-        <span id="progressCount">0 / 0 tâches faites</span>
-      </div>
-      <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressBar">
-        <div class="progress-fill" id="progressFill"></div>
-      </div>
-    </section>
+      <section class="toolbar card">
+        <input id="searchInput" type="search" placeholder="Recherche texte..." />
 
-    <section class="actions">
-      <button id="exportBtn" type="button">Export JSON</button>
-      <label class="import-label" for="importInput">Import JSON</label>
-      <input id="importInput" type="file" accept="application/json" />
-      <button id="resetBtn" type="button" class="danger">Reset seed</button>
-    </section>
+        <select id="prioFilter" aria-label="Filtre priorité">
+          <option value="all">Priorité: Toutes</option>
+          <option value="0">P0</option>
+          <option value="1">P1</option>
+          <option value="2">P2</option>
+        </select>
 
-    <section id="sections" class="sections"></section>
+        <select id="statusFilter" aria-label="Filtre statut">
+          <option value="all">Statut: Tout</option>
+          <option value="todo">Todo</option>
+          <option value="done">Done</option>
+        </select>
 
-    <footer class="notes" id="notes"></footer>
-  </main>
+        <select id="sortBy" aria-label="Tri">
+          <option value="priority">Tri: Priorité (P0→P2)</option>
+          <option value="status">Tri: Statut (Todo→Done)</option>
+          <option value="created">Tri: Date création</option>
+        </select>
 
-  <script src="assets/app.js"></script>
-</body>
+        <button id="addSectionBtn" type="button">+ Catégorie</button>
+        <button id="exportBtn" type="button">Export JSON</button>
+        <label class="file-btn" for="importInput">Import JSON</label>
+        <input id="importInput" type="file" accept="application/json" hidden />
+        <button id="resetBtn" type="button" class="danger">Reset Seed</button>
+      </section>
+
+      <section id="sectionsContainer" class="sections"></section>
+    </main>
+
+    <template id="taskTemplate">
+      <article class="task" data-task-id="">
+        <label class="checkbox-wrap">
+          <input type="checkbox" class="task-done" />
+          <span>Done</span>
+        </label>
+        <input class="task-text" type="text" />
+        <select class="task-prio" aria-label="Priorité">
+          <option value="0">P0</option>
+          <option value="1">P1</option>
+          <option value="2">P2</option>
+        </select>
+        <select class="task-section" aria-label="Catégorie"></select>
+        <button type="button" class="task-save">Save</button>
+        <button type="button" class="task-delete danger">Delete</button>
+      </article>
+    </template>
+
+    <script src="assets/app.js"></script>
+  </body>
 </html>
