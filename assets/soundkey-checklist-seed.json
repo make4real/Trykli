@@ -1,0 +1,78 @@
+{
+  "title": "SoundKey — Suivi d’avancement",
+  "sections": [
+    {
+      "title": "Site V2",
+      "tasks": [
+        { "label": "Nouveau design V2 en ligne", "done": true, "priority": 1 },
+        { "label": "Pages principales créées", "done": true, "priority": 1 },
+        { "label": "Header/menu fonctionnel", "done": true, "priority": 1 },
+        { "label": "Pages /customize actives", "done": true, "priority": 1 }
+      ]
+    },
+    {
+      "title": "Personnalisation / Admin / Supabase",
+      "tasks": [
+        { "label": "Upload admin vers Supabase OK", "done": true, "priority": 1 },
+        { "label": "Token généré OK", "done": true, "priority": 1 },
+        { "label": "Fichiers reçus dans Supabase OK", "done": true, "priority": 1 },
+        { "label": "Visualiseur d’images: images indépendantes des options (OK)", "done": true, "priority": 1 }
+      ]
+    },
+    {
+      "title": "Conversion & contenus",
+      "tasks": [
+        { "label": "Faire pack “photos produit” (fond propre + angles)", "done": false, "priority": 0 },
+        { "label": "Faire photos packaging", "done": false, "priority": 0 },
+        { "label": "Faire photos portées (mise en situation)", "done": false, "priority": 0 },
+        { "label": "Faire photos macro NFC/QR", "done": false, "priority": 0 },
+        { "label": "Remplacer toutes les images temporaires du site", "done": false, "priority": 0 }
+      ]
+    },
+    {
+      "title": "Admin & lien lecteur",
+      "tasks": [
+        { "label": "Après “Publish” : afficher automatiquement le lien du player (copier-coller)", "done": false, "priority": 0 },
+        { "label": "Ajouter un bouton “Copier le lien”", "done": false, "priority": 0 },
+        { "label": "Vérifier que le lien mène au bon lecteur pour le token généré", "done": false, "priority": 0 }
+      ]
+    },
+    {
+      "title": "Checkout & commande",
+      "tasks": [
+        { "label": "Vérifier paiement/checkout (flow complet)", "done": false, "priority": 0 },
+        { "label": "Achat test de bout en bout", "done": false, "priority": 0 },
+        { "label": "Email confirmation (ou équivalent) : vérifier réception", "done": false, "priority": 0 },
+        { "label": "Page confirmation claire (résumé + next steps)", "done": false, "priority": 0 }
+      ]
+    },
+    {
+      "title": "SEO & partage",
+      "tasks": [
+        { "label": "Corriger Open Graph (image + titre + description)", "done": false, "priority": 1 },
+        { "label": "Meta title / description pages clés", "done": false, "priority": 1 },
+        { "label": "Favicon/manifest si présent", "done": false, "priority": 1 }
+      ]
+    },
+    {
+      "title": "Pages légales & support",
+      "tasks": [
+        { "label": "Page Contact clean", "done": false, "priority": 1 },
+        { "label": "FAQ (questions simples)", "done": false, "priority": 1 },
+        { "label": "Conditions / confidentialité (si déjà prévu dans ton site)", "done": false, "priority": 1 }
+      ]
+    },
+    {
+      "title": "Tracking & lancement",
+      "tasks": [
+        { "label": "Analytics (si utilisé) : vérifier que ça track", "done": false, "priority": 1 },
+        { "label": "Checklist pré-lancement (dernier tour mobile/desktop)", "done": false, "priority": 1 },
+        { "label": "Préparer 3 contenus Instagram/TikTok (démo produit)", "done": false, "priority": 1 }
+      ]
+    }
+  ],
+  "notes": [
+    "Astuce : fais un achat test dès que paiements + variantes sont prêts.",
+    "Les photos produit = priorité #1 avant le lancement."
+  ]
+}
