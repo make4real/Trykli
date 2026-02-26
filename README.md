@@ -1,31 +1,31 @@
-# Trykli — Jeux de couple
+# SoundKey — Suivi d’avancement (statique)
 
-Site web statique 100% HTML/CSS/JS. Tout fonctionne hors ligne, sans dépendance, compatible Netlify et GitHub Pages.
+Page ultra légère en **HTML/CSS/JS natifs** (aucune dépendance runtime).
+
+## Objectif
+Suivre l’avancement SoundKey V2 avec :
+- checklist par section,
+- progression globale (% + compteur),
+- export/import JSON,
+- reset au seed,
+- sauvegarde automatique dans `localStorage` (`soundkey_tasks_v2`).
 
 ## Lancer localement
-- Ouvrir `index.html` directement dans un navigateur.
-- Ou lancer un petit serveur local :
-  ```bash
-  python -m http.server 8080
-  ```
-  Puis ouvrir http://localhost:8080.
+```bash
+python -m http.server 8080
+```
+Puis ouvrir http://localhost:8080.
 
-## Déploiement Netlify (auto)
-1. Glisser-déposer le dossier racine du projet dans Netlify.
-2. Le fichier `_redirects` est déjà fourni pour la SPA.
-3. Associez le domaine **trykli.com** dans la configuration Netlify si besoin.
-
-## Déploiement GitHub Pages
-1. Poussez le repo sur GitHub (branche `main`).
-2. Dans **Settings → Pages**, sélectionnez :
-   - Source : `main`
-   - Dossier : `/root`
-3. Le site est publié automatiquement.
+## Déploiement Netlify
+Le repo inclut `netlify.toml` :
+- **publish dir**: `.`
+- **build command**: aucune (site statique direct)
+- **cache headers**:
+  - `/assets/*` -> cache long immuable
+  - `/index.html` -> revalidation
 
 ## Structure
-- `/index.html` : SPA principale
-- `/assets/style.css` : styles
-- `/assets/app.js` : logique
-- `/assets/data.js` : toutes les cartes/questions/jeux
-- `/_redirects` : redirection SPA
-- `/favicon.svg` : icône
+- `/index.html` : page principale
+- `/assets/app.css` : styles
+- `/assets/app.js` : logique + seed des tâches SoundKey V2
+- `/netlify.toml` : config de déploiement et cache

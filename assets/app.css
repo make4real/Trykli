@@ -1,0 +1,84 @@
+:root {
+  color-scheme: dark;
+  --bg: #0d1117;
+  --card: #161b22;
+  --card-alt: #1e2631;
+  --text: #e6edf3;
+  --muted: #9da7b3;
+  --line: #2b3440;
+  --ok: #2ea043;
+  --p0: #f85149;
+  --p1: #d29922;
+  --p2: #3fb950;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.header h1 { margin: 0 0 6px; font-size: 1.7rem; }
+.subtitle { margin: 0; color: var(--muted); }
+
+.progress-card, .actions, .section, .notes {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+.progress-card { padding: 14px; margin-top: 16px; }
+.progress-meta { display: flex; justify-content: space-between; margin-bottom: 10px; }
+.progress-track { height: 10px; background: var(--card-alt); border-radius: 999px; overflow: hidden; }
+.progress-fill { height: 100%; width: 0; background: var(--ok); transition: width .15s linear; }
+
+.actions { display: flex; gap: 10px; align-items: center; padding: 12px; margin-top: 12px; flex-wrap: wrap; }
+button, .import-label {
+  background: var(--card-alt);
+  color: var(--text);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+button.danger { border-color: #8b2f2f; }
+#importInput { display: none; }
+
+.sections { margin-top: 14px; display: grid; gap: 12px; }
+.section { padding: 12px; }
+.section h2 { margin: 0 0 10px; font-size: 1.05rem; }
+.task {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  align-items: start;
+  padding: 8px 0;
+  border-top: 1px solid var(--line);
+}
+.task:first-of-type { border-top: 0; }
+.task input { margin-top: 3px; }
+.task.done .text { color: var(--muted); text-decoration: line-through; }
+.badge {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 2px 8px;
+  font-size: 0.75rem;
+  min-width: 34px;
+  text-align: center;
+}
+.badge.p0 { color: var(--p0); border-color: #6f2f2f; }
+.badge.p1 { color: var(--p1); border-color: #6b5520; }
+.badge.p2 { color: var(--p2); border-color: #2f5f3a; }
+
+.notes { margin-top: 14px; padding: 12px 14px; color: var(--muted); }
+.notes ul { margin: 8px 0 0 18px; }
+
+@media (max-width: 600px) {
+  .progress-meta { flex-direction: column; gap: 5px; }
+}
