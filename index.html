@@ -3,74 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SoundKey Tasks</title>
-    <link rel="stylesheet" href="assets/app.css" />
+    <title>FridgeFlow — Roadmap Tracker</title>
+    <meta name="description" content="Suivi interactif de la roadmap FridgeFlow" />
+    <link rel="stylesheet" href="styles/global.css" />
   </head>
   <body>
-    <main class="app">
-      <header class="header card">
-        <div>
-          <h1>SoundKey Task Tracker</h1>
-          <p class="muted">Suivi local, sans dépendances, 100% offline après chargement.</p>
-        </div>
-        <div class="progress-wrap">
-          <div class="progress-meta" id="progressText">0% · 0/0</div>
-          <div class="progress-bar" aria-hidden="true">
-            <div id="progressFill"></div>
-          </div>
-        </div>
-      </header>
-
-      <section class="toolbar card">
-        <input id="searchInput" type="search" placeholder="Recherche texte..." />
-
-        <select id="prioFilter" aria-label="Filtre priorité">
-          <option value="all">Priorité: Toutes</option>
-          <option value="0">P0</option>
-          <option value="1">P1</option>
-          <option value="2">P2</option>
-        </select>
-
-        <select id="statusFilter" aria-label="Filtre statut">
-          <option value="all">Statut: Tout</option>
-          <option value="todo">Todo</option>
-          <option value="done">Done</option>
-        </select>
-
-        <select id="sortBy" aria-label="Tri">
-          <option value="priority">Tri: Priorité (P0→P2)</option>
-          <option value="status">Tri: Statut (Todo→Done)</option>
-          <option value="created">Tri: Date création</option>
-        </select>
-
-        <button id="addSectionBtn" type="button">+ Catégorie</button>
-        <button id="exportBtn" type="button">Export JSON</button>
-        <label class="file-btn" for="importInput">Import JSON</label>
-        <input id="importInput" type="file" accept="application/json" hidden />
-        <button id="resetBtn" type="button" class="danger">Reset Seed</button>
-      </section>
-
-      <section id="sectionsContainer" class="sections"></section>
-    </main>
-
-    <template id="taskTemplate">
-      <article class="task" data-task-id="">
-        <label class="checkbox-wrap">
-          <input type="checkbox" class="task-done" />
-          <span>Done</span>
-        </label>
-        <input class="task-text" type="text" />
-        <select class="task-prio" aria-label="Priorité">
-          <option value="0">P0</option>
-          <option value="1">P1</option>
-          <option value="2">P2</option>
-        </select>
-        <select class="task-section" aria-label="Catégorie"></select>
-        <button type="button" class="task-save">Save</button>
-        <button type="button" class="task-delete danger">Delete</button>
-      </article>
-    </template>
-
-    <script src="assets/app.js"></script>
+    <div id="app"></div>
+    <script type="module" src="src/main.js"></script>
   </body>
 </html>
