@@ -41,7 +41,7 @@ namespace Trykli.Data
                     Setup(item, ItemKind.Ramp, ArtId.ItemRamp, "#D9A066", true, 15f);
                     break;
                 case Fan:
-                    Setup(item, ItemKind.Fan, ArtId.ItemFan, "#4FC3F7", true, 45f);
+                    Setup(item, ItemKind.Fan, ArtId.ItemFan, "#4FC3F7", true, 15f);
                     break;
                 case PortalAB:
                     Setup(item, ItemKind.Portal, ArtId.ItemPortal, "#9B59FF", true, 45f);

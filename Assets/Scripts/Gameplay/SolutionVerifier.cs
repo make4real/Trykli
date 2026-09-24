@@ -66,7 +66,8 @@ namespace Trykli.Gameplay
                 Vector2 position = zone.shape == ZoneShape.Point ? zone.position : step.position;
                 float rotation = Placement.PlacementRules.ClampRotation(zone, step.rotation, item.rotationStep, item.rotatable);
                 ElementData data = ElementFactory.DataForItem(item, position, rotation, endpoint);
-                ElementFactory.Create(data, context.PlacedRoot, theme);
+                GameObject placed = ElementFactory.Create(data, context.PlacedRoot, theme);
+                Placement.PlacedItem.ApplyZoneLink(zone, placed.GetComponent<Mechanics.MechanismBase>());
             }
 
             bool finished = false;

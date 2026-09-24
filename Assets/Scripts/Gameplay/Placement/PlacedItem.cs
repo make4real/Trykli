@@ -49,6 +49,15 @@ namespace Trykli.Placement
             Zone = zone;
             transform.position = position;
             SetRotation(rotation);
+            ApplyZoneLink(zone != null ? zone.Data : null, GetComponent<MechanismBase>());
+        }
+
+        /// <summary>Items placed in a zone linked to a switch channel only work once that channel is signalled.</summary>
+        public static void ApplyZoneLink(PlacementZoneData zone, MechanismBase mechanism)
+        {
+            if (mechanism == null || mechanism is Portal) return;
+            if (zone != null && zone.linkedChannel >= 0) mechanism.OverrideActivation(ActivationMode.ActivatedBySignal, zone.linkedChannel);
+            else mechanism.OverrideActivation(ActivationMode.AlwaysActive, -1);
         }
 
         public void Detach()

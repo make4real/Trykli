@@ -28,6 +28,18 @@ namespace Trykli.Mechanics
         /// <summary>Channel this mechanism listens to. Portals use their channel as pair id instead.</summary>
         protected virtual int SignalChannel => listenChannel;
 
+        /// <summary>
+        /// Changes how the mechanism reacts to buttons (used when an item is placed in a zone linked to a channel).
+        /// Takes effect when the simulation starts.
+        /// </summary>
+        public void OverrideActivation(ActivationMode mode, int channel)
+        {
+            activation = mode;
+            listenChannel = channel;
+            IsActive = mode != ActivationMode.ActivatedBySignal;
+            RefreshActiveVisual();
+        }
+
         protected virtual void Awake()
         {
             // Mechanisms authored directly in a level prefab are not configured from data: use their visual child.
