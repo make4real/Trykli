@@ -84,7 +84,7 @@ def level_064():
     zs = L.slot(slots[0][0], slots[0][1], [S], default_rot=0, min_rot=-45, max_rot=45)
     L.path_crystal(0.6)
     L.items(spring=1)
-    L.stars(NoHazard('Laser', key='obj.l063.laser'), Attempts(3, key='obj.l054.tries'))
+    L.stars(NoHazard('Laser', key='obj.l063.laser'), Attempts(2, key='obj.l054.tries'))
     L.solution((S, zs, None))
     L.tip("Choisis l'angle qui arrive pendant l'extinction.", "Pick the angle that arrives while the beam is off.")
     return L

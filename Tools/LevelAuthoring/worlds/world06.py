@@ -93,7 +93,7 @@ def level_054():
     zs = L.slot(slots[0][0], slots[0][1], [S], default_rot=0, min_rot=-45, max_rot=45)
     L.path_crystal(0.7)
     L.items(spring=1, ramp=1)
-    L.stars(MaxObjects(2), Attempts(3, key=L.text('obj.l054.tries', "Moins de 3 essais", "Fewer than 3 attempts")))
+    L.stars(MaxObjects(2), Attempts(2, key=L.text('obj.l054.tries', "Moins de 3 essais", "Fewer than 3 attempts")))
     L.solution((S, zs, -15))
     L.tip("Le rebond doit tomber sur la plateforme au bon moment.", "The bounce has to land on the platform at the right time.")
     return L

@@ -1,0 +1,400 @@
+{
+ "levelId": 88,
+ "worldId": 9,
+ "levelNumber": 8,
+ "nameKey": "level.088.name",
+ "difficulty": 8,
+ "isBoss": false,
+ "timeLimit": 16.0,
+ "tutorial": 0,
+ "layout": {
+  "spawn": {
+   "x": -4.2,
+   "y": 6.4
+  },
+  "goal": {
+   "x": 3.8,
+   "y": -3.3
+  },
+  "goalRadius": 0.7,
+  "bounds": {
+   "x": -5.0,
+   "y": -5.0,
+   "width": 10.0,
+   "height": 14.0
+  },
+  "elements": [
+   {
+    "type": 0,
+    "id": "",
+    "position": {
+     "x": 0.0,
+     "y": -4.5
+    },
+    "rotation": 0.0,
+    "size": {
+     "x": 10.0,
+     "y": 1.0
+    },
+    "surface": 0,
+    "channel": -1,
+    "emitChannel": -1,
+    "activation": 0,
+    "power": 0.0,
+    "radius": 0.0,
+    "length": 0.0,
+    "travel": {
+     "x": 0.0,
+     "y": 0.0
+    },
+    "period": 0.0,
+    "onDuration": 0.0,
+    "offDuration": 0.0,
+    "phase": 0.0,
+    "delay": 0.0,
+    "speed": 0.0,
+    "lethal": true,
+    "loop": true,
+    "oneShot": true,
+    "gravityMode": 0,
+    "endpoint": ""
+   },
+   {
+    "type": 0,
+    "id": "",
+    "position": {
+     "x": 1.5,
+     "y": 3.4
+    },
+    "rotation": 0.0,
+    "size": {
+     "x": 0.5,
+     "y": 11.2
+    },
+    "surface": 1,
+    "channel": -1,
+    "emitChannel": -1,
+    "activation": 0,
+    "power": 0.0,
+    "radius": 0.0,
+    "length": 0.0,
+    "travel": {
+     "x": 0.0,
+     "y": 0.0
+    },
+    "period": 0.0,
+    "onDuration": 0.0,
+    "offDuration": 0.0,
+    "phase": 0.0,
+    "delay": 0.0,
+    "speed": 0.0,
+    "lethal": true,
+    "loop": true,
+    "oneShot": true,
+    "gravityMode": 0,
+    "endpoint": ""
+   },
+   {
+    "type": 0,
+    "id": "",
+    "position": {
+     "x": 5.0,
+     "y": 2.5
+    },
+    "rotation": 0.0,
+    "size": {
+     "x": 0.5,
+     "y": 13.0
+    },
+    "surface": 1,
+    "channel": -1,
+    "emitChannel": -1,
+    "activation": 0,
+    "power": 0.0,
+    "radius": 0.0,
+    "length": 0.0,
+    "travel": {
+     "x": 0.0,
+     "y": 0.0
+    },
+    "period": 0.0,
+    "onDuration": 0.0,
+    "offDuration": 0.0,
+    "phase": 0.0,
+    "delay": 0.0,
+    "speed": 0.0,
+    "lethal": true,
+    "loop": true,
+    "oneShot": true,
+    "gravityMode": 0,
+    "endpoint": ""
+   },
+   {
+    "type": 2,
+    "id": "c1",
+    "position": {
+     "x": 3.4,
+     "y": 0.7
+    },
+    "rotation": 0.0,
+    "size": {
+     "x": 0.0,
+     "y": 0.0
+    },
+    "surface": 0,
+    "channel": -1,
+    "emitChannel": -1,
+    "activation": 0,
+    "power": 0.0,
+    "radius": 0.0,
+    "length": 0.0,
+    "travel": {
+     "x": 0.0,
+     "y": 0.0
+    },
+    "period": 0.0,
+    "onDuration": 0.0,
+    "offDuration": 0.0,
+    "phase": 0.0,
+    "delay": 0.0,
+    "speed": 0.0,
+    "lethal": true,
+    "loop": true,
+    "oneShot": true,
+    "gravityMode": 0,
+    "endpoint": ""
+   },
+   {
+    "type": 2,
+    "id": "c2",
+    "position": {
+     "x": 3.4,
+     "y": -0.7
+    },
+    "rotation": 0.0,
+    "size": {
+     "x": 0.0,
+     "y": 0.0
+    },
+    "surface": 0,
+    "channel": -1,
+    "emitChannel": -1,
+    "activation": 0,
+    "power": 0.0,
+    "radius": 0.0,
+    "length": 0.0,
+    "travel": {
+     "x": 0.0,
+     "y": 0.0
+    },
+    "period": 0.0,
+    "onDuration": 0.0,
+    "offDuration": 0.0,
+    "phase": 0.0,
+    "delay": 0.0,
+    "speed": 0.0,
+    "lethal": true,
+    "loop": true,
+    "oneShot": true,
+    "gravityMode": 0,
+    "endpoint": ""
+   },
+   {
+    "type": 2,
+    "id": "c3",
+    "position": {
+     "x": 3.4,
+     "y": -2.24
+    },
+    "rotation": 0.0,
+    "size": {
+     "x": 0.0,
+     "y": 0.0
+    },
+    "surface": 0,
+    "channel": -1,
+    "emitChannel": -1,
+    "activation": 0,
+    "power": 0.0,
+    "radius": 0.0,
+    "length": 0.0,
+    "travel": {
+     "x": 0.0,
+     "y": 0.0
+    },
+    "period": 0.0,
+    "onDuration": 0.0,
+    "offDuration": 0.0,
+    "phase": 0.0,
+    "delay": 0.0,
+    "speed": 0.0,
+    "lethal": true,
+    "loop": true,
+    "oneShot": true,
+    "gravityMode": 0,
+    "endpoint": ""
+   }
+  ],
+  "zones": [
+   {
+    "id": "z0",
+    "shape": 0,
+    "position": {
+     "x": -4.2,
+     "y": 2.4
+    },
+    "size": {
+     "x": 0.0,
+     "y": 0.0
+    },
+    "rotation": 0.0,
+    "allowedItems": [
+     "portal_ab"
+    ],
+    "allowRotation": true,
+    "minRotation": -180.0,
+    "maxRotation": 180.0,
+    "defaultRotation": 0.0,
+    "capacity": 1,
+    "linkedChannel": -1
+   },
+   {
+    "id": "z1",
+    "shape": 0,
+    "position": {
+     "x": 3.4,
+     "y": 4.6
+    },
+    "size": {
+     "x": 0.0,
+     "y": 0.0
+    },
+    "rotation": 0.0,
+    "allowedItems": [
+     "portal_ab"
+    ],
+    "allowRotation": true,
+    "minRotation": -180.0,
+    "maxRotation": 180.0,
+    "defaultRotation": 0.0,
+    "capacity": 1,
+    "linkedChannel": -1
+   },
+   {
+    "id": "z2",
+    "shape": 1,
+    "position": {
+     "x": -3.8,
+     "y": -2.4
+    },
+    "size": {
+     "x": 1.6,
+     "y": 1.0
+    },
+    "rotation": 0.0,
+    "allowedItems": [
+     "ramp"
+    ],
+    "allowRotation": true,
+    "minRotation": -45.0,
+    "maxRotation": 45.0,
+    "defaultRotation": -30.0,
+    "capacity": 1,
+    "linkedChannel": -1
+   },
+   {
+    "id": "z3",
+    "shape": 0,
+    "position": {
+     "x": -0.6,
+     "y": -2.4
+    },
+    "size": {
+     "x": 0.0,
+     "y": 0.0
+    },
+    "rotation": 0.0,
+    "allowedItems": [
+     "magnet"
+    ],
+    "allowRotation": true,
+    "minRotation": -180.0,
+    "maxRotation": 180.0,
+    "defaultRotation": 0.0,
+    "capacity": 1,
+    "linkedChannel": -1
+   }
+  ]
+ },
+ "inventory": [
+  {
+   "itemId": "magnet",
+   "count": 1
+  },
+  {
+   "itemId": "portal_ab",
+   "count": 1
+  },
+  {
+   "itemId": "ramp",
+   "count": 1
+  }
+ ],
+ "objectives": [
+  {
+   "type": "Complete",
+   "count": 0,
+   "value": 0.0,
+   "comparison": 0,
+   "target": "",
+   "invert": false,
+   "descriptionKey": ""
+  },
+  {
+   "type": "MaxObjects",
+   "count": 2,
+   "value": 0.0,
+   "comparison": 0,
+   "target": "",
+   "invert": false,
+   "descriptionKey": ""
+  },
+  {
+   "type": "CollectCrystals",
+   "count": 0,
+   "value": 0.0,
+   "comparison": 0,
+   "target": "",
+   "invert": false,
+   "descriptionKey": "obj.l088.high"
+  }
+ ],
+ "solution": [
+  {
+   "itemId": "portal_ab",
+   "zoneIndex": 0,
+   "position": {
+    "x": -4.2,
+    "y": 2.4
+   },
+   "rotation": 0.0
+  },
+  {
+   "itemId": "portal_ab",
+   "zoneIndex": 1,
+   "position": {
+    "x": 3.4,
+    "y": 4.6
+   },
+   "rotation": 180.0
+  }
+ ],
+ "hints": [],
+ "tipKey": "level.088.tip",
+ "camera": {
+  "autoFit": true,
+  "orthographicSize": 10.0,
+  "followTrykli": false
+ },
+ "notes": ""
+}

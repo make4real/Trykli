@@ -49,7 +49,9 @@ def write_json(path, data):
 def main():
     args = [a for a in sys.argv[1:] if not a.startswith('--')]
     search = '--no-search' not in sys.argv
-    world_ids = [int(a) for a in args] if args else list(range(1, 11))
+    import glob
+    found = sorted(int(os.path.basename(f)[5:7]) for f in glob.glob(os.path.join(HERE, 'worlds', 'world[0-9][0-9].py')))
+    world_ids = [int(a) for a in args] if args else found
     os.makedirs(LEVEL_DIR, exist_ok=True)
     os.makedirs(LOC_DIR, exist_ok=True)
 
@@ -80,7 +82,7 @@ def main():
         texts['world.%d.mechanic' % w[0]] = (w[3], w[4])
     write_json(os.path.join(LEVEL_DIR, 'worlds.json'), worlds)
 
-    if world_ids == list(range(1, 11)):
+    if not args:
         write_localization(texts)
         write_report(rows)
 

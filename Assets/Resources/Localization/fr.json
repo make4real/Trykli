@@ -1,0 +1,1846 @@
+{
+ "code": "fr",
+ "displayName": "Français",
+ "entries": [
+  {
+   "key": "common.close",
+   "value": "FERMER"
+  },
+  {
+   "key": "common.coming_soon",
+   "value": "Bientôt disponible"
+  },
+  {
+   "key": "common.confirm",
+   "value": "Confirmer ?"
+  },
+  {
+   "key": "common.no",
+   "value": "NON"
+  },
+  {
+   "key": "common.off",
+   "value": "OFF"
+  },
+  {
+   "key": "common.on",
+   "value": "ON"
+  },
+  {
+   "key": "common.yes",
+   "value": "OUI"
+  },
+  {
+   "key": "credits.body",
+   "value": "TRYKLI\nConception et développement : l'équipe TRYKLI\nGraphismes et sons temporaires générés par le jeu.\nMerci d'avoir joué !"
+  },
+  {
+   "key": "credits.title",
+   "value": "CRÉDITS"
+  },
+  {
+   "key": "error.no_levels",
+   "value": "Aucun niveau trouvé."
+  },
+  {
+   "key": "fail.modify",
+   "value": "MODIFIER"
+  },
+  {
+   "key": "fail.msg.1",
+   "value": "Oups."
+  },
+  {
+   "key": "fail.msg.2",
+   "value": "Presque."
+  },
+  {
+   "key": "fail.msg.3",
+   "value": "Trykli avait un autre plan."
+  },
+  {
+   "key": "fail.msg.4",
+   "value": "Pas tout à fait."
+  },
+  {
+   "key": "fail.reason.explosion",
+   "value": "L'explosion était trop proche."
+  },
+  {
+   "key": "fail.reason.hazard",
+   "value": "Trykli a touché un danger."
+  },
+  {
+   "key": "fail.reason.out",
+   "value": "Trykli est sorti du niveau."
+  },
+  {
+   "key": "fail.reason.stuck",
+   "value": "Trykli est coincé."
+  },
+  {
+   "key": "fail.reason.timeout",
+   "value": "Temps maximum dépassé."
+  },
+  {
+   "key": "fail.reason.unknown",
+   "value": "Essaie encore."
+  },
+  {
+   "key": "fail.retry",
+   "value": "RÉESSAYER"
+  },
+  {
+   "key": "hint.button",
+   "value": "INDICE"
+  },
+  {
+   "key": "hint.shown",
+   "value": "Regarde la zone en surbrillance."
+  },
+  {
+   "key": "hud.go",
+   "value": "GO"
+  },
+  {
+   "key": "hud.level",
+   "value": "{0}  {1}"
+  },
+  {
+   "key": "hud.objectives_collapsed",
+   "value": "Objectifs (toucher pour afficher)"
+  },
+  {
+   "key": "hud.portal_count",
+   "value": "{0} ({1})"
+  },
+  {
+   "key": "hud.stop",
+   "value": "STOP"
+  },
+  {
+   "key": "hud.trash",
+   "value": "Lâche ici pour retirer"
+  },
+  {
+   "key": "item.bomb",
+   "value": "Bombe"
+  },
+  {
+   "key": "item.bumper",
+   "value": "Bumper"
+  },
+  {
+   "key": "item.fan",
+   "value": "Ventilateur"
+  },
+  {
+   "key": "item.gravity_switch",
+   "value": "Inverseur de gravité"
+  },
+  {
+   "key": "item.magnet",
+   "value": "Aimant"
+  },
+  {
+   "key": "item.mini_platform",
+   "value": "Mini plateforme"
+  },
+  {
+   "key": "item.portal_ab",
+   "value": "Portail A/B"
+  },
+  {
+   "key": "item.portal_cd",
+   "value": "Portail C/D"
+  },
+  {
+   "key": "item.ramp",
+   "value": "Rampe"
+  },
+  {
+   "key": "item.spring",
+   "value": "Ressort"
+  },
+  {
+   "key": "levels.boss",
+   "value": "BOSS"
+  },
+  {
+   "key": "master.button",
+   "value": "TRYKLI MASTER"
+  },
+  {
+   "key": "master.complete_stars",
+   "value": "COMPLÉTER LES ÉTOILES"
+  },
+  {
+   "key": "master.crystals",
+   "value": "Cristaux : {0}/{1}"
+  },
+  {
+   "key": "master.levels",
+   "value": "Niveaux : {0}/{1}"
+  },
+  {
+   "key": "master.replay",
+   "value": "REJOUER LES NIVEAUX"
+  },
+  {
+   "key": "master.stars",
+   "value": "Étoiles : {0}/{1}"
+  },
+  {
+   "key": "master.title",
+   "value": "TRYKLI MASTER"
+  },
+  {
+   "key": "menu.levels",
+   "value": "NIVEAUX"
+  },
+  {
+   "key": "menu.play",
+   "value": "JOUER"
+  },
+  {
+   "key": "menu.progress",
+   "value": "Étoiles {0} / {1}   ·   Cristaux {2}"
+  },
+  {
+   "key": "menu.settings",
+   "value": "PARAMÈTRES"
+  },
+  {
+   "key": "menu.skins",
+   "value": "SKINS"
+  },
+  {
+   "key": "menu.tagline",
+   "value": "Observe. Place. Lance."
+  },
+  {
+   "key": "obj.attempts",
+   "value": "Réussir en {0} essais maximum"
+  },
+  {
+   "key": "obj.avoid.ceiling",
+   "value": "Ne pas toucher le plafond"
+  },
+  {
+   "key": "obj.avoid.ground",
+   "value": "Ne pas toucher le sol"
+  },
+  {
+   "key": "obj.avoid.obstacle",
+   "value": "Aucun contact avec un obstacle"
+  },
+  {
+   "key": "obj.avoid.platform",
+   "value": "Ne toucher aucune plateforme"
+  },
+  {
+   "key": "obj.avoid.wall",
+   "value": "Ne toucher aucun mur"
+  },
+  {
+   "key": "obj.bounce.atleast",
+   "value": "Faire au moins {0} rebonds"
+  },
+  {
+   "key": "obj.bounce.atmost",
+   "value": "Faire au plus {0} rebonds"
+  },
+  {
+   "key": "obj.bounce.exactly",
+   "value": "Faire exactement {0} rebonds"
+  },
+  {
+   "key": "obj.bumper.atleast",
+   "value": "Toucher au moins {0} bumpers"
+  },
+  {
+   "key": "obj.bumper.atmost",
+   "value": "Toucher au plus {0} bumpers"
+  },
+  {
+   "key": "obj.bumper.exactly",
+   "value": "Exactement {0} contacts bumper"
+  },
+  {
+   "key": "obj.complete",
+   "value": "Atteindre la sortie"
+  },
+  {
+   "key": "obj.crystal_all",
+   "value": "Récupérer tous les cristaux"
+  },
+  {
+   "key": "obj.crystal_one",
+   "value": "Récupérer le cristal"
+  },
+  {
+   "key": "obj.crystals",
+   "value": "Récupérer {0} cristaux"
+  },
+  {
+   "key": "obj.first_try",
+   "value": "Réussir du premier coup"
+  },
+  {
+   "key": "obj.interaction.button.atleast",
+   "value": "Activer {0} bouton(s)"
+  },
+  {
+   "key": "obj.interaction.button.atmost",
+   "value": "Activer au plus {0} bouton(s)"
+  },
+  {
+   "key": "obj.interaction.button.exactly",
+   "value": "Activer exactement {0} bouton(s)"
+  },
+  {
+   "key": "obj.interaction.cannon.atleast",
+   "value": "Utiliser le canon"
+  },
+  {
+   "key": "obj.interaction.cannon.atmost",
+   "value": "Éviter le canon"
+  },
+  {
+   "key": "obj.interaction.cannon.exactly",
+   "value": "Utiliser le canon {0} fois"
+  },
+  {
+   "key": "obj.interaction.door_open.atleast",
+   "value": "Ouvrir {0} porte(s)"
+  },
+  {
+   "key": "obj.interaction.door_open.atmost",
+   "value": "Ouvrir au plus {0} porte(s)"
+  },
+  {
+   "key": "obj.interaction.door_open.exactly",
+   "value": "Ouvrir exactement {0} porte(s)"
+  },
+  {
+   "key": "obj.interaction.explosion.atleast",
+   "value": "Déclencher {0} explosion(s)"
+  },
+  {
+   "key": "obj.interaction.explosion.atmost",
+   "value": "Au plus {0} explosion(s)"
+  },
+  {
+   "key": "obj.interaction.explosion.exactly",
+   "value": "Exactement {0} explosion(s)"
+  },
+  {
+   "key": "obj.interaction.gravity_flip.atleast",
+   "value": "Inverser la gravité {0} fois"
+  },
+  {
+   "key": "obj.interaction.gravity_flip.atmost",
+   "value": "Au plus {0} inversion(s)"
+  },
+  {
+   "key": "obj.interaction.gravity_flip.exactly",
+   "value": "Exactement {0} inversion(s)"
+  },
+  {
+   "key": "obj.interaction.laser_off.atleast",
+   "value": "Désactiver {0} laser(s)"
+  },
+  {
+   "key": "obj.interaction.laser_off.atmost",
+   "value": "Désactiver au plus {0} laser(s)"
+  },
+  {
+   "key": "obj.interaction.laser_off.exactly",
+   "value": "Désactiver exactement {0} laser(s)"
+  },
+  {
+   "key": "obj.interaction.portal.atleast",
+   "value": "Utiliser les portails {0} fois"
+  },
+  {
+   "key": "obj.interaction.portal.atmost",
+   "value": "Utiliser les portails au plus {0} fois"
+  },
+  {
+   "key": "obj.interaction.portal.exactly",
+   "value": "Utiliser les portails exactement {0} fois"
+  },
+  {
+   "key": "obj.interaction.zone.atleast",
+   "value": "Passer par la zone indiquée"
+  },
+  {
+   "key": "obj.interaction.zone.atmost",
+   "value": "Éviter la zone indiquée"
+  },
+  {
+   "key": "obj.interaction.zone.exactly",
+   "value": "Passer par la zone indiquée"
+  },
+  {
+   "key": "obj.items_any",
+   "value": "objets"
+  },
+  {
+   "key": "obj.max_objects",
+   "value": "Maximum {0} objets"
+  },
+  {
+   "key": "obj.max_objects_one",
+   "value": "Utiliser 1 seul objet"
+  },
+  {
+   "key": "obj.no_hazard.any",
+   "value": "Ne toucher aucun danger"
+  },
+  {
+   "key": "obj.no_hazard.explosion",
+   "value": "Rester loin des explosions"
+  },
+  {
+   "key": "obj.no_hazard.laser",
+   "value": "Aucun contact laser"
+  },
+  {
+   "key": "obj.no_hazard.spikes",
+   "value": "Ne toucher aucun pic"
+  },
+  {
+   "key": "obj.no_stop",
+   "value": "Ne jamais s'arrêter"
+  },
+  {
+   "key": "obj.only_item",
+   "value": "Utiliser uniquement : {0}"
+  },
+  {
+   "key": "obj.time",
+   "value": "Terminer en moins de {0} s"
+  },
+  {
+   "key": "obj.use_item.atleast",
+   "value": "Utiliser au moins {0} x {1}"
+  },
+  {
+   "key": "obj.use_item.atmost",
+   "value": "Utiliser au plus {0} x {1}"
+  },
+  {
+   "key": "obj.use_item.exactly",
+   "value": "Utiliser exactement {0} x {1}"
+  },
+  {
+   "key": "pause.continue",
+   "value": "CONTINUER"
+  },
+  {
+   "key": "pause.quit",
+   "value": "QUITTER LE NIVEAU"
+  },
+  {
+   "key": "pause.restart",
+   "value": "RECOMMENCER"
+  },
+  {
+   "key": "pause.settings",
+   "value": "PARAMÈTRES"
+  },
+  {
+   "key": "pause.title",
+   "value": "PAUSE"
+  },
+  {
+   "key": "settings.credits",
+   "value": "CRÉDITS"
+  },
+  {
+   "key": "settings.language",
+   "value": "Langue : {0}"
+  },
+  {
+   "key": "settings.music",
+   "value": "Musique : {0}"
+  },
+  {
+   "key": "settings.privacy",
+   "value": "CONFIDENTIALITÉ"
+  },
+  {
+   "key": "settings.reset",
+   "value": "RÉINITIALISER"
+  },
+  {
+   "key": "settings.reset_confirm",
+   "value": "Effacer toute la progression ?"
+  },
+  {
+   "key": "settings.reset_done",
+   "value": "Progression réinitialisée."
+  },
+  {
+   "key": "settings.sounds",
+   "value": "Sons : {0}"
+  },
+  {
+   "key": "settings.title",
+   "value": "PARAMÈTRES"
+  },
+  {
+   "key": "settings.vibrations",
+   "value": "Vibrations : {0}"
+  },
+  {
+   "key": "skin.astronaut",
+   "value": "Astronaute"
+  },
+  {
+   "key": "skin.classic",
+   "value": "Classique"
+  },
+  {
+   "key": "skin.ninja",
+   "value": "Ninja"
+  },
+  {
+   "key": "skin.pirate",
+   "value": "Pirate"
+  },
+  {
+   "key": "skin.robot",
+   "value": "Robot"
+  },
+  {
+   "key": "skin.slime",
+   "value": "Slime"
+  },
+  {
+   "key": "skins.available",
+   "value": "Disponible"
+  },
+  {
+   "key": "skins.cost",
+   "value": "{0} cristaux"
+  },
+  {
+   "key": "skins.crystals",
+   "value": "Cristaux collectés : {0}"
+  },
+  {
+   "key": "skins.selected",
+   "value": "Choisi"
+  },
+  {
+   "key": "skins.title",
+   "value": "SKINS"
+  },
+  {
+   "key": "splash.studio",
+   "value": "Un jeu de puzzle physique"
+  },
+  {
+   "key": "tip.generic",
+   "value": "Observe bien le trajet de Trykli avant de placer."
+  },
+  {
+   "key": "tip.item.bomb",
+   "value": "L'explosion repousse Trykli loin de la bombe."
+  },
+  {
+   "key": "tip.item.bumper",
+   "value": "Le bumper renvoie Trykli à l'opposé du point de contact."
+  },
+  {
+   "key": "tip.item.fan",
+   "value": "La flèche du ventilateur montre la direction du vent."
+  },
+  {
+   "key": "tip.item.gravity_switch",
+   "value": "L'inverseur retourne la gravité de Trykli."
+  },
+  {
+   "key": "tip.item.magnet",
+   "value": "L'aimant attire Trykli dans son cercle."
+  },
+  {
+   "key": "tip.item.mini_platform",
+   "value": "Une petite plateforme peut servir d'appui."
+  },
+  {
+   "key": "tip.item.portal_ab",
+   "value": "Trykli sort du portail B dans la direction de sa flèche."
+  },
+  {
+   "key": "tip.item.portal_cd",
+   "value": "Les portails C/D forment une seconde paire."
+  },
+  {
+   "key": "tip.item.ramp",
+   "value": "Une rampe change la direction de Trykli."
+  },
+  {
+   "key": "tip.item.spring",
+   "value": "Essaie de modifier l'angle du ressort."
+  },
+  {
+   "key": "tuto.drag",
+   "value": "Glisse l'objet dans la zone en pointillés."
+  },
+  {
+   "key": "tuto.go",
+   "value": "Appuie sur GO !"
+  },
+  {
+   "key": "tuto.restart",
+   "value": "RÉESSAYER relance le même plan. MODIFIER te laisse le changer."
+  },
+  {
+   "key": "tuto.rotate",
+   "value": "Touche deux fois l'objet ou utilise les flèches pour le tourner."
+  },
+  {
+   "key": "tuto.rotate_intro",
+   "value": "Place le ressort, puis tourne-le."
+  },
+  {
+   "key": "victory.levels",
+   "value": "NIVEAUX"
+  },
+  {
+   "key": "victory.new_best",
+   "value": "Nouveau record d'étoiles !"
+  },
+  {
+   "key": "victory.next",
+   "value": "NIVEAU SUIVANT"
+  },
+  {
+   "key": "victory.replay",
+   "value": "REJOUER"
+  },
+  {
+   "key": "victory.stats",
+   "value": "Temps {0} s   ·   Cristaux {1} / {2}"
+  },
+  {
+   "key": "victory.title",
+   "value": "NIVEAU TERMINÉ"
+  },
+  {
+   "key": "victory.world_unlocked",
+   "value": "Monde {0} débloqué !"
+  },
+  {
+   "key": "worlds.card_title",
+   "value": "MONDE {0} - {1}"
+  },
+  {
+   "key": "worlds.levels_done",
+   "value": "{0} / {1} niveaux"
+  },
+  {
+   "key": "worlds.locked_message",
+   "value": "Termine le monde précédent pour débloquer celui-ci."
+  },
+  {
+   "key": "worlds.title",
+   "value": "MONDES"
+  },
+  {
+   "key": "worlds.total_stars",
+   "value": "{0} / {1} étoiles"
+  },
+  {
+   "key": "level.001.name",
+   "value": "Tutoriel du ressort"
+  },
+  {
+   "key": "level.001.tip",
+   "value": "Place le ressort sous Trykli, puis appuie sur GO."
+  },
+  {
+   "key": "level.002.name",
+   "value": "Choisir la position"
+  },
+  {
+   "key": "level.002.tip",
+   "value": "Trois emplacements, une seule bonne portée."
+  },
+  {
+   "key": "level.003.name",
+   "value": "Premier angle"
+  },
+  {
+   "key": "level.003.tip",
+   "value": "Tourne le ressort pour viser la plateforme."
+  },
+  {
+   "key": "level.004.name",
+   "value": "Rampe et ressort"
+  },
+  {
+   "key": "level.004.tip",
+   "value": "Trykli doit rouler jusqu'au ressort."
+  },
+  {
+   "key": "level.005.name",
+   "value": "Double rebond"
+  },
+  {
+   "key": "level.005.tip",
+   "value": "Le premier ressort doit t'envoyer sur le second."
+  },
+  {
+   "key": "level.006.name",
+   "value": "Premier danger"
+  },
+  {
+   "key": "level.006.tip",
+   "value": "Vise juste au-dessus des pics."
+  },
+  {
+   "key": "level.007.name",
+   "value": "Le grand trou"
+  },
+  {
+   "key": "level.007.tip",
+   "value": "Un angle plus ouvert porte plus loin."
+  },
+  {
+   "key": "level.008.name",
+   "value": "Le détour"
+  },
+  {
+   "key": "level.008.tip",
+   "value": "La sortie se prend en faisant le tour par la gauche."
+  },
+  {
+   "key": "level.009.name",
+   "value": "Deux solutions"
+  },
+  {
+   "key": "level.009.tip",
+   "value": "Le chemin du haut est plus long mais plus sûr."
+  },
+  {
+   "key": "level.010.name",
+   "value": "Boss rebonds"
+  },
+  {
+   "key": "level.010.tip",
+   "value": "Franchis l'obstacle central en deux sauts."
+  },
+  {
+   "key": "level.011.name",
+   "value": "Premier ventilateur"
+  },
+  {
+   "key": "level.011.tip",
+   "value": "Le vent pousse Trykli dans la direction du ventilateur."
+  },
+  {
+   "key": "level.012.name",
+   "value": "Vent contraire"
+  },
+  {
+   "key": "level.012.tip",
+   "value": "Une rampe bien inclinée résiste au vent."
+  },
+  {
+   "key": "level.013.name",
+   "value": "Ascension"
+  },
+  {
+   "key": "level.013.tip",
+   "value": "Un courant vertical peut soulever Trykli."
+  },
+  {
+   "key": "level.014.name",
+   "value": "Souffle et rebond"
+  },
+  {
+   "key": "level.014.tip",
+   "value": "Lance Trykli dans le courant d'air."
+  },
+  {
+   "key": "level.015.name",
+   "value": "Double courant"
+  },
+  {
+   "key": "level.015.tip",
+   "value": "Un ventilateur pour avancer, un autre pour monter."
+  },
+  {
+   "key": "level.016.name",
+   "value": "Passage étroit"
+  },
+  {
+   "key": "level.016.tip",
+   "value": "Un petit saut au bon moment évite les deux rangées."
+  },
+  {
+   "key": "level.017.name",
+   "value": "Courbe aérienne"
+  },
+  {
+   "key": "level.017.tip",
+   "value": "Monte d'abord, glisse ensuite."
+  },
+  {
+   "key": "level.018.name",
+   "value": "Cristaux du ciel"
+  },
+  {
+   "key": "level.018.tip",
+   "value": "Le vent peut porter Trykli très loin."
+  },
+  {
+   "key": "level.019.name",
+   "value": "Mauvaise orientation"
+  },
+  {
+   "key": "level.019.tip",
+   "value": "Une seule orientation évite les pics."
+  },
+  {
+   "key": "level.020.name",
+   "value": "Boss du vent"
+  },
+  {
+   "key": "level.020.tip",
+   "value": "Monte, laisse-toi dériver, puis atterris."
+  },
+  {
+   "key": "level.021.name",
+   "value": "Premier portail"
+  },
+  {
+   "key": "level.021.tip",
+   "value": "Trykli ressort du portail B dans la direction de sa flèche."
+  },
+  {
+   "key": "level.022.name",
+   "value": "Conserver l'élan"
+  },
+  {
+   "key": "level.022.tip",
+   "value": "La vitesse est conservée à la sortie du portail."
+  },
+  {
+   "key": "level.023.name",
+   "value": "Sortie verticale"
+  },
+  {
+   "key": "level.023.tip",
+   "value": "Oriente la sortie vers le haut."
+  },
+  {
+   "key": "level.024.name",
+   "value": "Saut dimensionnel"
+  },
+  {
+   "key": "level.024.tip",
+   "value": "Vise le portail avec le ressort."
+  },
+  {
+   "key": "level.025.name",
+   "value": "Deux paires"
+  },
+  {
+   "key": "level.025.tip",
+   "value": "Enchaîne les deux paires, dans le bon ordre."
+  },
+  {
+   "key": "level.026.name",
+   "value": "Portail dangereux"
+  },
+  {
+   "key": "level.026.tip",
+   "value": "Une mauvaise sortie mène droit aux pics."
+  },
+  {
+   "key": "level.027.name",
+   "value": "Portail dans le vent"
+  },
+  {
+   "key": "level.027.tip",
+   "value": "Le vent corrige la sortie du portail."
+  },
+  {
+   "key": "level.028.name",
+   "value": "Orientation libre"
+  },
+  {
+   "key": "level.028.tip",
+   "value": "C'est l'orientation du portail de sortie qui compte."
+  },
+  {
+   "key": "level.029.name",
+   "value": "Fausse route"
+  },
+  {
+   "key": "level.029.tip",
+   "value": "Le portail fixe ne mène nulle part."
+  },
+  {
+   "key": "level.030.name",
+   "value": "Boss dimensionnel"
+  },
+  {
+   "key": "level.030.tip",
+   "value": "Ressort, portail, courant d'air : dans cet ordre."
+  },
+  {
+   "key": "level.031.name",
+   "value": "Premier aimant"
+  },
+  {
+   "key": "level.031.tip",
+   "value": "L'aimant attire Trykli dans son rayon."
+  },
+  {
+   "key": "level.032.name",
+   "value": "Courbe magnétique"
+  },
+  {
+   "key": "level.032.tip",
+   "value": "L'aimant courbe la trajectoire au-dessus du mur."
+  },
+  {
+   "key": "level.033.name",
+   "value": "Au-dessus du vide"
+  },
+  {
+   "key": "level.033.tip",
+   "value": "Un aimant au-dessus du vide ralentit la chute."
+  },
+  {
+   "key": "level.034.name",
+   "value": "Rebond attiré"
+  },
+  {
+   "key": "level.034.tip",
+   "value": "Le ressort propulse, l'aimant courbe la trajectoire."
+  },
+  {
+   "key": "level.035.name",
+   "value": "Double aimant"
+  },
+  {
+   "key": "level.035.tip",
+   "value": "Deux aimants dessinent un S."
+  },
+  {
+   "key": "level.036.name",
+   "value": "Aimant activable"
+  },
+  {
+   "key": "level.036.tip",
+   "value": "Le bouton allume l'aimant posé dans la zone rouge."
+  },
+  {
+   "key": "level.037.name",
+   "value": "Aimant et porte"
+  },
+  {
+   "key": "level.037.tip",
+   "value": "L'aimant aide Trykli à monter jusqu'au bouton."
+  },
+  {
+   "key": "level.038.name",
+   "value": "Orbite de cristaux"
+  },
+  {
+   "key": "level.038.tip",
+   "value": "Tourne autour de l'aimant."
+  },
+  {
+   "key": "level.039.name",
+   "value": "Courbe précise"
+  },
+  {
+   "key": "level.039.tip",
+   "value": "Passe par la fenêtre du mur, sans le toucher."
+  },
+  {
+   "key": "level.040.name",
+   "value": "Boss magnétique"
+  },
+  {
+   "key": "level.040.tip",
+   "value": "Trois champs magnétiques, une sortie très haute."
+  },
+  {
+   "key": "level.041.name",
+   "value": "Premier bumper"
+  },
+  {
+   "key": "level.041.tip",
+   "value": "Le bumper renvoie Trykli à l'opposé du point de contact."
+  },
+  {
+   "key": "level.042.name",
+   "value": "Ping-pong"
+  },
+  {
+   "key": "level.042.tip",
+   "value": "Fais rebondir Trykli d'un bumper à l'autre."
+  },
+  {
+   "key": "level.043.name",
+   "value": "Première bombe"
+  },
+  {
+   "key": "level.043.tip",
+   "value": "L'explosion pousse Trykli à l'opposé de la bombe."
+  },
+  {
+   "key": "level.044.name",
+   "value": "Explosion orientée"
+  },
+  {
+   "key": "level.044.tip",
+   "value": "La position de la bombe choisit la direction."
+  },
+  {
+   "key": "level.045.name",
+   "value": "Bombe et ressort"
+  },
+  {
+   "key": "level.045.tip",
+   "value": "Le ressort envoie Trykli dans la zone d'explosion."
+  },
+  {
+   "key": "level.046.name",
+   "value": "Bumper portal"
+  },
+  {
+   "key": "level.046.tip",
+   "value": "Le bumper envoie Trykli vers un portail inaccessible."
+  },
+  {
+   "key": "level.047.name",
+   "value": "Souffle explosif"
+  },
+  {
+   "key": "level.047.tip",
+   "value": "Le ventilateur corrige la trajectoire après l'explosion."
+  },
+  {
+   "key": "level.048.name",
+   "value": "Déclencheur"
+  },
+  {
+   "key": "level.048.tip",
+   "value": "La réaction doit finir sur le bouton."
+  },
+  {
+   "key": "level.049.name",
+   "value": "Trois chemins"
+  },
+  {
+   "key": "level.049.tip",
+   "value": "Trois routes : une seule prend tous les cristaux."
+  },
+  {
+   "key": "level.050.name",
+   "value": "Boss réaction"
+  },
+  {
+   "key": "level.050.tip",
+   "value": "Explosion, bumper, portail : une grande réaction en chaîne."
+  },
+  {
+   "key": "level.051.name",
+   "value": "Première plateforme"
+  },
+  {
+   "key": "level.051.tip",
+   "value": "Attends que la plateforme t'emmène."
+  },
+  {
+   "key": "level.052.name",
+   "value": "Ascenseur"
+  },
+  {
+   "key": "level.052.tip",
+   "value": "Rebondis sur l'ascenseur au bon moment."
+  },
+  {
+   "key": "level.053.name",
+   "value": "Plateforme rotative"
+  },
+  {
+   "key": "level.053.tip",
+   "value": "La plateforme penche : profite de son inclinaison."
+  },
+  {
+   "key": "level.054.name",
+   "value": "Machine à rebond"
+  },
+  {
+   "key": "level.054.tip",
+   "value": "Le rebond doit tomber sur la plateforme au bon moment."
+  },
+  {
+   "key": "level.055.name",
+   "value": "Deux plateformes"
+  },
+  {
+   "key": "level.055.tip",
+   "value": "Passe d'une plateforme à l'autre."
+  },
+  {
+   "key": "level.056.name",
+   "value": "Transport aérien"
+  },
+  {
+   "key": "level.056.tip",
+   "value": "Le vent soulève Trykli au bout du trajet."
+  },
+  {
+   "key": "level.057.name",
+   "value": "Portail mobile"
+  },
+  {
+   "key": "level.057.tip",
+   "value": "La sortie du portail doit tomber sur la plateforme."
+  },
+  {
+   "key": "level.058.name",
+   "value": "Activation mécanique"
+  },
+  {
+   "key": "level.058.tip",
+   "value": "Le bouton démarre la plateforme."
+  },
+  {
+   "key": "level.059.name",
+   "value": "Timing indirect"
+  },
+  {
+   "key": "level.059.tip",
+   "value": "Le bon placement crée le bon délai."
+  },
+  {
+   "key": "level.060.name",
+   "value": "Boss machines"
+  },
+  {
+   "key": "level.060.tip",
+   "value": "Plateforme, portail, ascenseur : une vraie usine."
+  },
+  {
+   "key": "level.061.name",
+   "value": "Ouvre la porte"
+  },
+  {
+   "key": "level.061.tip",
+   "value": "Le bouton ouvre la porte : passe dessus avant d'y arriver."
+  },
+  {
+   "key": "level.062.name",
+   "value": "Bouton détour"
+  },
+  {
+   "key": "level.062.tip",
+   "value": "Le chemin direct bute sur la porte : passe d'abord par le bouton."
+  },
+  {
+   "key": "level.063.name",
+   "value": "Premier laser"
+  },
+  {
+   "key": "level.063.tip",
+   "value": "Passe au-dessus du rayon."
+  },
+  {
+   "key": "level.064.name",
+   "value": "Laser intermittent"
+  },
+  {
+   "key": "level.064.tip",
+   "value": "Choisis l'angle qui arrive pendant l'extinction."
+  },
+  {
+   "key": "level.065.name",
+   "value": "Couper le laser"
+  },
+  {
+   "key": "level.065.tip",
+   "value": "Un bouton peut couper le laser."
+  },
+  {
+   "key": "level.066.name",
+   "value": "Porte dimensionnelle"
+  },
+  {
+   "key": "level.066.tip",
+   "value": "Le bouton est derrière la porte... mais pas pour un portail."
+  },
+  {
+   "key": "level.067.name",
+   "value": "Double commande"
+  },
+  {
+   "key": "level.067.tip",
+   "value": "Chaque bouton ouvre la porte suivante."
+  },
+  {
+   "key": "level.068.name",
+   "value": "Ordre logique"
+  },
+  {
+   "key": "level.068.tip",
+   "value": "Le bouton de gauche ouvre deux portes, celui de droite une seule."
+  },
+  {
+   "key": "level.069.name",
+   "value": "Petit réseau"
+  },
+  {
+   "key": "level.069.tip",
+   "value": "Bouton, ressort, bouton, aimant : une cascade."
+  },
+  {
+   "key": "level.070.name",
+   "value": "Boss systèmes"
+  },
+  {
+   "key": "level.070.tip",
+   "value": "Portail, ressort, bouton, laser, porte : dans cet ordre."
+  },
+  {
+   "key": "level.071.name",
+   "value": "Premier switch"
+  },
+  {
+   "key": "level.071.tip",
+   "value": "Traverse le switch : la gravité s'inverse."
+  },
+  {
+   "key": "level.072.name",
+   "value": "Plafond"
+  },
+  {
+   "key": "level.072.tip",
+   "value": "Tête en bas, le plafond devient le sol."
+  },
+  {
+   "key": "level.073.name",
+   "value": "Rebond inversé"
+  },
+  {
+   "key": "level.073.tip",
+   "value": "Au plafond, le ressort renvoie vers le bas."
+  },
+  {
+   "key": "level.074.name",
+   "value": "Portail inversé"
+  },
+  {
+   "key": "level.074.tip",
+   "value": "Même tête en bas, un portail garde la vitesse."
+  },
+  {
+   "key": "level.075.name",
+   "value": "Deux inversions"
+  },
+  {
+   "key": "level.075.tip",
+   "value": "Monte au plafond, puis redescends au bon moment."
+  },
+  {
+   "key": "level.076.name",
+   "value": "Gravité laser"
+  },
+  {
+   "key": "level.076.tip",
+   "value": "Le laser ne touche pas le plafond."
+  },
+  {
+   "key": "level.077.name",
+   "value": "Vent ascendant"
+  },
+  {
+   "key": "level.077.tip",
+   "value": "Tête en bas, un ventilateur tourné vers le sol te décroche du plafond."
+  },
+  {
+   "key": "level.078.name",
+   "value": "Sol-plafond-sol"
+  },
+  {
+   "key": "level.078.tip",
+   "value": "Sol, plafond, sol : trois orientations."
+  },
+  {
+   "key": "level.079.name",
+   "value": "Choix de gravité"
+  },
+  {
+   "key": "level.079.tip",
+   "value": "Seule une orientation mène à la sortie parfaite."
+  },
+  {
+   "key": "level.080.name",
+   "value": "Boss gravité"
+  },
+  {
+   "key": "level.080.tip",
+   "value": "Gravité, portail et vent : un long voyage tête en bas."
+  },
+  {
+   "key": "level.081.name",
+   "value": "Trio classique"
+  },
+  {
+   "key": "level.081.tip",
+   "value": "Portail, ressort, aimant : dans cet ordre."
+  },
+  {
+   "key": "level.082.name",
+   "value": "Explosion aérienne"
+  },
+  {
+   "key": "level.082.tip",
+   "value": "Le vent retient Trykli ; la bombe le projette."
+  },
+  {
+   "key": "level.083.name",
+   "value": "Portail mouvant"
+  },
+  {
+   "key": "level.083.tip",
+   "value": "Le ressort t'envoie au portail, la sortie tombe dans la nacelle."
+  },
+  {
+   "key": "level.084.name",
+   "value": "Gravité magnétique"
+  },
+  {
+   "key": "level.084.tip",
+   "value": "L'aimant tire Trykli sous le mur pendant qu'il tombe vers le haut."
+  },
+  {
+   "key": "level.085.name",
+   "value": "Sécurité maximale"
+  },
+  {
+   "key": "level.085.tip",
+   "value": "Deux boutons, deux lasers : coupe-les dans l'ordre."
+  },
+  {
+   "key": "level.086.name",
+   "value": "Explosion dimensionnelle"
+  },
+  {
+   "key": "level.086.tip",
+   "value": "L'explosion doit viser le portail."
+  },
+  {
+   "key": "level.087.name",
+   "value": "Usine à vent"
+  },
+  {
+   "key": "level.087.tip",
+   "value": "Deux courants d'air et une plateforme : synchronise-les."
+  },
+  {
+   "key": "level.088.name",
+   "value": "Trois routes"
+  },
+  {
+   "key": "level.088.tip",
+   "value": "Trois routes mènent à la sortie ; celle du haut est la meilleure."
+  },
+  {
+   "key": "level.089.name",
+   "value": "Multi-étapes"
+  },
+  {
+   "key": "level.089.tip",
+   "value": "Vent, bouton, ressort, aimant : quatre étapes."
+  },
+  {
+   "key": "level.090.name",
+   "value": "Mega puzzle"
+  },
+  {
+   "key": "level.090.tip",
+   "value": "Portail, vent, bouton, ressort, aimant : tout s'enchaîne."
+  },
+  {
+   "key": "level.091.name",
+   "value": "Précision contrôlée"
+  },
+  {
+   "key": "level.091.tip",
+   "value": "Le ressort lance, l'aimant rattrape : deux zones d'effet."
+  },
+  {
+   "key": "level.092.name",
+   "value": "Minimaliste"
+  },
+  {
+   "key": "level.092.tip",
+   "value": "Tout n'est pas utile : la meilleure solution est la plus simple."
+  },
+  {
+   "key": "level.093.name",
+   "value": "Solutions multiples"
+  },
+  {
+   "key": "level.093.tip",
+   "value": "Portail, bumper ou aimant : plusieurs chemins, plusieurs risques."
+  },
+  {
+   "key": "level.094.name",
+   "value": "Grande chaîne"
+  },
+  {
+   "key": "level.094.tip",
+   "value": "Bombe, bumper, portail, vent : une réaction en chaîne complète."
+  },
+  {
+   "key": "level.095.name",
+   "value": "Timing expert"
+  },
+  {
+   "key": "level.095.tip",
+   "value": "Deux plateformes, un laser qui clignote : tout est une question de rythme."
+  },
+  {
+   "key": "level.096.name",
+   "value": "Dimension inversée"
+  },
+  {
+   "key": "level.096.tip",
+   "value": "Tête en bas, l'aimant fait passer Trykli sous le laser."
+  },
+  {
+   "key": "level.097.name",
+   "value": "Machine complexe"
+  },
+  {
+   "key": "level.097.tip",
+   "value": "Bouton, ascenseur, vent, bouton : chaque machine lance la suivante."
+  },
+  {
+   "key": "level.098.name",
+   "value": "Presque libre"
+  },
+  {
+   "key": "level.098.tip",
+   "value": "Beaucoup de libertés : plusieurs machines fonctionnent."
+  },
+  {
+   "key": "level.099.name",
+   "value": "Ultimate Challenge"
+  },
+  {
+   "key": "level.099.tip",
+   "value": "Bombe, portail, ressort, gravité, aimant : chacun a son rôle."
+  },
+  {
+   "key": "level.100.name",
+   "value": "TRYKLI MASTER"
+  },
+  {
+   "key": "level.100.tip",
+   "value": "Lancement, téléportation, inversion, bouton, explosion : la grande finale."
+  },
+  {
+   "key": "obj.l002.first",
+   "value": "Placer le ressort du premier coup"
+  },
+  {
+   "key": "obj.l003.angle",
+   "value": "Angle correct en 2 essais maximum"
+  },
+  {
+   "key": "obj.l004.both",
+   "value": "Utiliser les 2 objets"
+  },
+  {
+   "key": "obj.l004.high",
+   "value": "Récupérer le cristal haut"
+  },
+  {
+   "key": "obj.l006.walls",
+   "value": "Ne toucher aucun mur latéral"
+  },
+  {
+   "key": "obj.l008.left",
+   "value": "Passer par la plateforme gauche"
+  },
+  {
+   "key": "obj.l009.high",
+   "value": "Prendre le chemin haut"
+  },
+  {
+   "key": "obj.l011.fan",
+   "value": "Utiliser 1 ventilateur"
+  },
+  {
+   "key": "obj.l012.left",
+   "value": "Ne pas toucher le mur gauche"
+  },
+  {
+   "key": "obj.l013.one",
+   "value": "Un seul placement"
+  },
+  {
+   "key": "obj.l013.top",
+   "value": "Récupérer le cristal supérieur"
+  },
+  {
+   "key": "obj.l015.fans",
+   "value": "Utiliser les 2 ventilateurs"
+  },
+  {
+   "key": "obj.l016.center",
+   "value": "Récupérer le cristal central"
+  },
+  {
+   "key": "obj.l016.walls",
+   "value": "Ne toucher aucun mur"
+  },
+  {
+   "key": "obj.l019.clean",
+   "value": "Aucun contact avec un obstacle"
+  },
+  {
+   "key": "obj.l019.tries",
+   "value": "Moins de 3 essais"
+  },
+  {
+   "key": "obj.l021.only",
+   "value": "Utiliser uniquement les portails"
+  },
+  {
+   "key": "obj.l022.after",
+   "value": "Récupérer le cristal après le portail"
+  },
+  {
+   "key": "obj.l022.one",
+   "value": "1 seul rebond"
+  },
+  {
+   "key": "obj.l023.ground",
+   "value": "Pas de contact avec le sol après la téléportation"
+  },
+  {
+   "key": "obj.l025.pairs",
+   "value": "Utiliser les 2 paires"
+  },
+  {
+   "key": "obj.l027.air",
+   "value": "Récupérer le cristal en plein vol"
+  },
+  {
+   "key": "obj.l028.hidden",
+   "value": "Récupérer le cristal caché"
+  },
+  {
+   "key": "obj.l028.tries",
+   "value": "Trouver l'angle en 3 essais maximum"
+  },
+  {
+   "key": "obj.l029.fake",
+   "value": "Ne jamais entrer dans le faux portail"
+  },
+  {
+   "key": "obj.l031.near",
+   "value": "Récupérer le cristal proche de l'aimant"
+  },
+  {
+   "key": "obj.l031.one",
+   "value": "Un seul aimant"
+  },
+  {
+   "key": "obj.l032.outer",
+   "value": "Récupérer le cristal extérieur"
+  },
+  {
+   "key": "obj.l033.bottom",
+   "value": "Aucun contact avec le fond"
+  },
+  {
+   "key": "obj.l035.both",
+   "value": "Utiliser les deux aimants"
+  },
+  {
+   "key": "obj.l036.after",
+   "value": "Récupérer le cristal après l'activation"
+  },
+  {
+   "key": "obj.l036.button",
+   "value": "Activer le bouton"
+  },
+  {
+   "key": "obj.l037.door",
+   "value": "Ouvrir la porte"
+  },
+  {
+   "key": "obj.l039.clean",
+   "value": "Aucun choc"
+  },
+  {
+   "key": "obj.l041.one",
+   "value": "Un seul bumper"
+  },
+  {
+   "key": "obj.l043.high",
+   "value": "Récupérer le cristal en hauteur"
+  },
+  {
+   "key": "obj.l043.one",
+   "value": "Une seule explosion"
+  },
+  {
+   "key": "obj.l044.clean",
+   "value": "Pas de rebond inutile"
+  },
+  {
+   "key": "obj.l046.after",
+   "value": "Récupérer le cristal après la téléportation"
+  },
+  {
+   "key": "obj.l046.combo",
+   "value": "1 bumper + 1 portail"
+  },
+  {
+   "key": "obj.l048.one",
+   "value": "Un seul objet"
+  },
+  {
+   "key": "obj.l051.platform",
+   "value": "Cristal sur la plateforme"
+  },
+  {
+   "key": "obj.l051.ride",
+   "value": "Rester sur la plateforme jusqu'au bout"
+  },
+  {
+   "key": "obj.l052.one",
+   "value": "Un seul rebond"
+  },
+  {
+   "key": "obj.l052.top",
+   "value": "Cristal au sommet"
+  },
+  {
+   "key": "obj.l053.outer",
+   "value": "Cristal extérieur"
+  },
+  {
+   "key": "obj.l054.tries",
+   "value": "Moins de 3 essais"
+  },
+  {
+   "key": "obj.l055.air",
+   "value": "Ne pas toucher le sol"
+  },
+  {
+   "key": "obj.l056.high",
+   "value": "Cristal en hauteur"
+  },
+  {
+   "key": "obj.l056.one",
+   "value": "Un seul ventilateur"
+  },
+  {
+   "key": "obj.l057.after",
+   "value": "Cristal après le portail"
+  },
+  {
+   "key": "obj.l059.flow",
+   "value": "Terminer sans attendre bloqué"
+  },
+  {
+   "key": "obj.l061.behind",
+   "value": "Cristal derrière la porte"
+  },
+  {
+   "key": "obj.l063.laser",
+   "value": "Aucun contact laser"
+  },
+  {
+   "key": "obj.l063.near",
+   "value": "Cristal proche du laser"
+  },
+  {
+   "key": "obj.l065.off",
+   "value": "Désactiver le laser"
+  },
+  {
+   "key": "obj.l066.portal",
+   "value": "Utiliser le portail"
+  },
+  {
+   "key": "obj.l066.secret",
+   "value": "Cristal secret"
+  },
+  {
+   "key": "obj.l067.both",
+   "value": "Activer les 2 boutons"
+  },
+  {
+   "key": "obj.l068.first",
+   "value": "Bon ordre du premier coup"
+  },
+  {
+   "key": "obj.l071.ceiling",
+   "value": "Cristal au plafond"
+  },
+  {
+   "key": "obj.l071.one",
+   "value": "Une seule inversion"
+  },
+  {
+   "key": "obj.l072.stay",
+   "value": "Rester au plafond"
+  },
+  {
+   "key": "obj.l072.upper",
+   "value": "Cristal supérieur"
+  },
+  {
+   "key": "obj.l073.bounce",
+   "value": "Un rebond inversé"
+  },
+  {
+   "key": "obj.l074.both",
+   "value": "Utiliser portail et switch"
+  },
+  {
+   "key": "obj.l074.dim",
+   "value": "Cristal dimensionnel"
+  },
+  {
+   "key": "obj.l075.two",
+   "value": "Exactement 2 inversions"
+  },
+  {
+   "key": "obj.l077.center",
+   "value": "Cristal central"
+  },
+  {
+   "key": "obj.l079.two",
+   "value": "Maximum 2 switches"
+  },
+  {
+   "key": "obj.l083.moving",
+   "value": "Cristal mobile"
+  },
+  {
+   "key": "obj.l086.exit",
+   "value": "Cristal à la sortie du portail"
+  },
+  {
+   "key": "obj.l088.high",
+   "value": "Route haute et 3 cristaux"
+  },
+  {
+   "key": "obj.l092.two",
+   "value": "Maximum 2 objets"
+  },
+  {
+   "key": "obj.l094.chain",
+   "value": "Chaîne complète sans arrêt"
+  },
+  {
+   "key": "obj.l095.tries",
+   "value": "Moins de 4 essais"
+  },
+  {
+   "key": "obj.l097.all",
+   "value": "Activer tous les boutons"
+  },
+  {
+   "key": "world.1.mechanic",
+   "value": "Gravité, rampes et ressorts"
+  },
+  {
+   "key": "world.1.name",
+   "value": "Premiers rebonds"
+  },
+  {
+   "key": "world.10.mechanic",
+   "value": "La maîtrise complète"
+  },
+  {
+   "key": "world.10.name",
+   "value": "Master Trykli"
+  },
+  {
+   "key": "world.2.mechanic",
+   "value": "Nouveau : le ventilateur"
+  },
+  {
+   "key": "world.2.name",
+   "value": "Le vent"
+  },
+  {
+   "key": "world.3.mechanic",
+   "value": "Nouveau : les portails"
+  },
+  {
+   "key": "world.3.name",
+   "value": "Portails"
+  },
+  {
+   "key": "world.4.mechanic",
+   "value": "Nouveau : l'aimant"
+  },
+  {
+   "key": "world.4.name",
+   "value": "Magnétisme"
+  },
+  {
+   "key": "world.5.mechanic",
+   "value": "Nouveau : bombes et bumpers"
+  },
+  {
+   "key": "world.5.name",
+   "value": "Réactions en chaîne"
+  },
+  {
+   "key": "world.6.mechanic",
+   "value": "Nouveau : plateformes mobiles et rotatives"
+  },
+  {
+   "key": "world.6.name",
+   "value": "Machines"
+  },
+  {
+   "key": "world.7.mechanic",
+   "value": "Nouveau : boutons, portes et lasers"
+  },
+  {
+   "key": "world.7.name",
+   "value": "Systèmes"
+  },
+  {
+   "key": "world.8.mechanic",
+   "value": "Nouveau : l'inverseur de gravité"
+  },
+  {
+   "key": "world.8.name",
+   "value": "Gravité"
+  },
+  {
+   "key": "world.9.mechanic",
+   "value": "Toutes les mécaniques combinées"
+  },
+  {
+   "key": "world.9.name",
+   "value": "Chaos contrôlé"
+  }
+ ]
+}

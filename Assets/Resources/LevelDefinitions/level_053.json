@@ -1,0 +1,317 @@
+{
+ "levelId": 53,
+ "worldId": 6,
+ "levelNumber": 3,
+ "nameKey": "level.053.name",
+ "difficulty": 6,
+ "isBoss": false,
+ "timeLimit": 16.0,
+ "tutorial": 0,
+ "layout": {
+  "spawn": {
+   "x": -4.3,
+   "y": 3.2
+  },
+  "goal": {
+   "x": 4.0,
+   "y": -0.9
+  },
+  "goalRadius": 0.7,
+  "bounds": {
+   "x": -5.0,
+   "y": -5.0,
+   "width": 10.0,
+   "height": 14.0
+  },
+  "elements": [
+   {
+    "type": 0,
+    "id": "",
+    "position": {
+     "x": -3.9,
+     "y": 2.1
+    },
+    "rotation": 0.0,
+    "size": {
+     "x": 2.2,
+     "y": 0.6
+    },
+    "surface": 4,
+    "channel": -1,
+    "emitChannel": -1,
+    "activation": 0,
+    "power": 0.0,
+    "radius": 0.0,
+    "length": 0.0,
+    "travel": {
+     "x": 0.0,
+     "y": 0.0
+    },
+    "period": 0.0,
+    "onDuration": 0.0,
+    "offDuration": 0.0,
+    "phase": 0.0,
+    "delay": 0.0,
+    "speed": 0.0,
+    "lethal": true,
+    "loop": true,
+    "oneShot": true,
+    "gravityMode": 0,
+    "endpoint": ""
+   },
+   {
+    "type": 1,
+    "id": "",
+    "position": {
+     "x": 0.0,
+     "y": -3.8
+    },
+    "rotation": 0.0,
+    "size": {
+     "x": 10.0,
+     "y": 0.4
+    },
+    "surface": 0,
+    "channel": -1,
+    "emitChannel": -1,
+    "activation": 0,
+    "power": 0.0,
+    "radius": 0.0,
+    "length": 0.0,
+    "travel": {
+     "x": 0.0,
+     "y": 0.0
+    },
+    "period": 0.0,
+    "onDuration": 0.0,
+    "offDuration": 0.0,
+    "phase": 0.0,
+    "delay": 0.0,
+    "speed": 0.0,
+    "lethal": true,
+    "loop": true,
+    "oneShot": true,
+    "gravityMode": 0,
+    "endpoint": ""
+   },
+   {
+    "type": 0,
+    "id": "",
+    "position": {
+     "x": 0.0,
+     "y": -4.6
+    },
+    "rotation": 0.0,
+    "size": {
+     "x": 10.0,
+     "y": 0.8
+    },
+    "surface": 0,
+    "channel": -1,
+    "emitChannel": -1,
+    "activation": 0,
+    "power": 0.0,
+    "radius": 0.0,
+    "length": 0.0,
+    "travel": {
+     "x": 0.0,
+     "y": 0.0
+    },
+    "period": 0.0,
+    "onDuration": 0.0,
+    "offDuration": 0.0,
+    "phase": 0.0,
+    "delay": 0.0,
+    "speed": 0.0,
+    "lethal": true,
+    "loop": true,
+    "oneShot": true,
+    "gravityMode": 0,
+    "endpoint": ""
+   },
+   {
+    "type": 11,
+    "id": "",
+    "position": {
+     "x": 0.0,
+     "y": -0.6
+    },
+    "rotation": 0.0,
+    "size": {
+     "x": 3.0,
+     "y": 0.3
+    },
+    "surface": 0,
+    "channel": -1,
+    "emitChannel": -1,
+    "activation": 0,
+    "power": 0.0,
+    "radius": 0.0,
+    "length": 25.0,
+    "travel": {
+     "x": 0.0,
+     "y": 0.0
+    },
+    "period": 0.0,
+    "onDuration": 0.0,
+    "offDuration": 0.0,
+    "phase": 0.0,
+    "delay": 0.0,
+    "speed": 60.0,
+    "lethal": true,
+    "loop": true,
+    "oneShot": true,
+    "gravityMode": 0,
+    "endpoint": ""
+   },
+   {
+    "type": 0,
+    "id": "",
+    "position": {
+     "x": 3.9,
+     "y": -1.9
+    },
+    "rotation": 0.0,
+    "size": {
+     "x": 2.2,
+     "y": 0.6
+    },
+    "surface": 4,
+    "channel": -1,
+    "emitChannel": -1,
+    "activation": 0,
+    "power": 0.0,
+    "radius": 0.0,
+    "length": 0.0,
+    "travel": {
+     "x": 0.0,
+     "y": 0.0
+    },
+    "period": 0.0,
+    "onDuration": 0.0,
+    "offDuration": 0.0,
+    "phase": 0.0,
+    "delay": 0.0,
+    "speed": 0.0,
+    "lethal": true,
+    "loop": true,
+    "oneShot": true,
+    "gravityMode": 0,
+    "endpoint": ""
+   },
+   {
+    "type": 2,
+    "id": "c1",
+    "position": {
+     "x": -0.38,
+     "y": 0.12
+    },
+    "rotation": 0.0,
+    "size": {
+     "x": 0.0,
+     "y": 0.0
+    },
+    "surface": 0,
+    "channel": -1,
+    "emitChannel": -1,
+    "activation": 0,
+    "power": 0.0,
+    "radius": 0.0,
+    "length": 0.0,
+    "travel": {
+     "x": 0.0,
+     "y": 0.0
+    },
+    "period": 0.0,
+    "onDuration": 0.0,
+    "offDuration": 0.0,
+    "phase": 0.0,
+    "delay": 0.0,
+    "speed": 0.0,
+    "lethal": true,
+    "loop": true,
+    "oneShot": true,
+    "gravityMode": 0,
+    "endpoint": ""
+   }
+  ],
+  "zones": [
+   {
+    "id": "z0",
+    "shape": 1,
+    "position": {
+     "x": -3.8,
+     "y": 2.9
+    },
+    "size": {
+     "x": 1.6,
+     "y": 0.6
+    },
+    "rotation": 0.0,
+    "allowedItems": [
+     "ramp"
+    ],
+    "allowRotation": true,
+    "minRotation": -30.0,
+    "maxRotation": 30.0,
+    "defaultRotation": -15.0,
+    "capacity": 1,
+    "linkedChannel": -1
+   }
+  ]
+ },
+ "inventory": [
+  {
+   "itemId": "ramp",
+   "count": 1
+  }
+ ],
+ "objectives": [
+  {
+   "type": "Complete",
+   "count": 0,
+   "value": 0.0,
+   "comparison": 0,
+   "target": "",
+   "invert": false,
+   "descriptionKey": ""
+  },
+  {
+   "type": "NoHazard",
+   "count": 0,
+   "value": 0.0,
+   "comparison": 0,
+   "target": "Any",
+   "invert": false,
+   "descriptionKey": ""
+  },
+  {
+   "type": "CollectCrystals",
+   "count": 1,
+   "value": 0.0,
+   "comparison": 0,
+   "target": "",
+   "invert": false,
+   "descriptionKey": "obj.l053.outer"
+  }
+ ],
+ "solution": [
+  {
+   "itemId": "ramp",
+   "zoneIndex": 0,
+   "position": {
+    "x": -3.8,
+    "y": 2.9
+   },
+   "rotation": -15.0
+  }
+ ],
+ "hints": [],
+ "tipKey": "level.053.tip",
+ "camera": {
+  "autoFit": true,
+  "orthographicSize": 10.0,
+  "followTrykli": false
+ },
+ "notes": ""
+}

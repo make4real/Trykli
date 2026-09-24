@@ -189,7 +189,7 @@ def level_019():
     L.path_crystal(0.5)
     L.items(fan=2, spring=1)
     L.stars(Avoid('Obstacle', key=L.text('obj.l019.clean', "Aucun contact avec un obstacle", "No contact with an obstacle")),
-            Attempts(3, key=L.text('obj.l019.tries', "Moins de 3 essais", "Fewer than 3 tries")))
+            Attempts(2, key=L.text('obj.l019.tries', "Moins de 3 essais", "Fewer than 3 tries")))
     L.solution(('spring', zs, 0), ('fan', zf1, None))
     L.tip("Une seule orientation évite les pics.", "Only one orientation avoids the spikes.")
     return L

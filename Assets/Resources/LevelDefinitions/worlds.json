@@ -1,0 +1,104 @@
+{
+ "worlds": [
+  {
+   "worldId": 1,
+   "nameKey": "world.1.name",
+   "themeKey": "world.1.theme",
+   "mechanicKey": "world.1.mechanic",
+   "backgroundTop": "#EAF4FF",
+   "backgroundBottom": "#C6DAF0",
+   "blockColor": "#4A5D7A",
+   "accentColor": "#FFB020"
+  },
+  {
+   "worldId": 2,
+   "nameKey": "world.2.name",
+   "themeKey": "world.2.theme",
+   "mechanicKey": "world.2.mechanic",
+   "backgroundTop": "#E3F6FF",
+   "backgroundBottom": "#9ED3F2",
+   "blockColor": "#3F6E8C",
+   "accentColor": "#4FC3F7"
+  },
+  {
+   "worldId": 3,
+   "nameKey": "world.3.name",
+   "themeKey": "world.3.theme",
+   "mechanicKey": "world.3.mechanic",
+   "backgroundTop": "#EFE6FF",
+   "backgroundBottom": "#BBA6F0",
+   "blockColor": "#4B3F72",
+   "accentColor": "#9B59FF"
+  },
+  {
+   "worldId": 4,
+   "nameKey": "world.4.name",
+   "themeKey": "world.4.theme",
+   "mechanicKey": "world.4.mechanic",
+   "backgroundTop": "#FFEDEA",
+   "backgroundBottom": "#F2BAB2",
+   "blockColor": "#6B3A3A",
+   "accentColor": "#E74C3C"
+  },
+  {
+   "worldId": 5,
+   "nameKey": "world.5.name",
+   "themeKey": "world.5.theme",
+   "mechanicKey": "world.5.mechanic",
+   "backgroundTop": "#FFF3DE",
+   "backgroundBottom": "#F5C68C",
+   "blockColor": "#5D4632",
+   "accentColor": "#FF7B1C"
+  },
+  {
+   "worldId": 6,
+   "nameKey": "world.6.name",
+   "themeKey": "world.6.theme",
+   "mechanicKey": "world.6.mechanic",
+   "backgroundTop": "#E6F4F0",
+   "backgroundBottom": "#A8D8CC",
+   "blockColor": "#2F5D55",
+   "accentColor": "#26A69A"
+  },
+  {
+   "worldId": 7,
+   "nameKey": "world.7.name",
+   "themeKey": "world.7.theme",
+   "mechanicKey": "world.7.mechanic",
+   "backgroundTop": "#ECEEF3",
+   "backgroundBottom": "#B7BECD",
+   "blockColor": "#353B4A",
+   "accentColor": "#FF5252"
+  },
+  {
+   "worldId": 8,
+   "nameKey": "world.8.name",
+   "themeKey": "world.8.theme",
+   "mechanicKey": "world.8.mechanic",
+   "backgroundTop": "#34466B",
+   "backgroundBottom": "#121C36",
+   "blockColor": "#8793B5",
+   "accentColor": "#2ECC71"
+  },
+  {
+   "worldId": 9,
+   "nameKey": "world.9.name",
+   "themeKey": "world.9.theme",
+   "mechanicKey": "world.9.mechanic",
+   "backgroundTop": "#F8E4F5",
+   "backgroundBottom": "#CFA2DB",
+   "blockColor": "#4E2F5C",
+   "accentColor": "#E84393"
+  },
+  {
+   "worldId": 10,
+   "nameKey": "world.10.name",
+   "themeKey": "world.10.theme",
+   "mechanicKey": "world.10.mechanic",
+   "backgroundTop": "#FFF8DA",
+   "backgroundBottom": "#F2D16B",
+   "blockColor": "#3B3355",
+   "accentColor": "#FFC93C"
+  }
+ ]
+}
