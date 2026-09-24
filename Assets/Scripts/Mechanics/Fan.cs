@@ -18,7 +18,7 @@ namespace Trykli.Mechanics
         [Tooltip("Acceleration applied to Trykli inside the stream (m/s^2). Gravity is 9.81.")]
         [SerializeField] private float acceleration = 16f;
         [SerializeField] private float streamLength = 4f;
-        [SerializeField] private float streamWidth = 1.2f;
+        [SerializeField] private float streamWidth = 1.6f;
         [SerializeField] private Vector2 bodySize = new Vector2(0.9f, 0.45f);
 
         private Transform[] _streaks;

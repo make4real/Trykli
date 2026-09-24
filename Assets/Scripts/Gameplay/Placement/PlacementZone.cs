@@ -77,6 +77,13 @@ namespace Trykli.Placement
                     break;
             }
 
+            // Zones linked to a button show a small button marker.
+            if (data.linkedChannel >= 0)
+            {
+                VisualFactory.Sprite(root, "Link", ArtId.Circle, new Color(1f, 0.35f, 0.35f, 0.9f), SortingOrders.Zones + 2,
+                    new Vector2(0.55f, 0.55f), new Vector2(0.28f, 0.28f));
+            }
+
             // A single accepted item is shown as a faint icon: the player understands the slot at a glance.
             if (data.allowedItems != null && data.allowedItems.Count == 1)
             {

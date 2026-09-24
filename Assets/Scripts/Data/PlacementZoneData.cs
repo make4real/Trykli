@@ -24,6 +24,8 @@ namespace Trykli.Data
         public float defaultRotation;
         [Tooltip("Maximum number of items in this zone.")]
         public int capacity = 1;
+        [Tooltip("Items placed here wait for this switch channel (button) before working. -1 = always active.")]
+        public int linkedChannel = -1;
 
         public bool Accepts(string itemId)
         {

@@ -13,9 +13,9 @@ namespace Trykli.Mechanics
     public sealed class Magnet : MechanismBase
     {
         [Header("Magnet")]
-        [SerializeField] private float fieldRadius = 3f;
+        [SerializeField] private float fieldRadius = 3.5f;
         [Tooltip("Maximum attraction acceleration (m/s^2).")]
-        [SerializeField] private float strength = 20f;
+        [SerializeField] private float strength = 22f;
         [SerializeField] private float bodyRadius = 0.35f;
 
         private Transform _wave;
