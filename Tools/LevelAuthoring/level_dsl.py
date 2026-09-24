@@ -19,7 +19,7 @@ ITEM_TYPE = {
     'magnet': sim.MAGNET, 'bomb': sim.BOMB, 'bumper': sim.BUMPER, 'mini_platform': sim.MINIPLATFORM,
     'gravity_switch': sim.GRAVITY,
 }
-ROTATABLE = {'spring': 15, 'ramp': 15, 'fan': 45, 'portal_ab': 45, 'portal_cd': 45, 'mini_platform': 15}
+ROTATABLE = {'spring': 15, 'ramp': 15, 'fan': 15, 'portal_ab': 45, 'portal_cd': 45, 'mini_platform': 15}
 
 
 def vec(x, y):
