@@ -182,6 +182,7 @@ def finalize(level, allow_search=True, grid=0.5):
         for step in level.solution_steps:
             if step['rotation'] is None:
                 step['rotation'] = level.zones[step['zoneIndex']]['defaultRotation']
+        ok = bool(level.solution_steps) and level.simulate().success
     if ok and level.path_crystals:
         result = level.simulate(trace=True)
         trace = result.trace
