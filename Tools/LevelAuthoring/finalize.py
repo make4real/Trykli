@@ -30,11 +30,17 @@ def place_goal_on_path(level, steps, start_fraction=0.3, min_score=1.1):
     others = [_trace(level, steps[:i] + steps[i + 1:]) for i in range(len(steps))]
     others.append(_trace(level, []))
     spawn = level.spawn_pos
+    region = getattr(level, 'goal_region', None)
     best = None
     first = int(len(path) * start_fraction)
     for k in range(first, len(path) - 5, 2):
         p = path[k]
         if sim.v_len(sim.v_sub(p, spawn)) < 2.5:
+            continue
+        if region and not (region[0] <= p[0] <= region[2] and region[1] <= p[1] <= region[3]):
+            continue
+        bx, by, bw, bh = level.bounds
+        if not (bx + 0.6 <= p[0] <= bx + bw - 0.6 and by + 0.6 <= p[1] <= by + bh - 0.6):
             continue
         score = min(min(sim.v_len(sim.v_sub(p, q)) for q in other[::2]) if other else 99.0 for other in others)
         if best is None or score > best[0] + 0.05:
@@ -53,10 +59,16 @@ def _necessity_score(level, steps):
     others = [_trace(level, steps[:i] + steps[i + 1:]) for i in range(len(steps))]
     others.append(_trace(level, []))
     spawn = level.spawn_pos
+    region = getattr(level, 'goal_region', None)
     best = 0.0
     for k in range(int(len(path) * 0.3), len(path) - 5, 3):
         p = path[k]
         if sim.v_len(sim.v_sub(p, spawn)) < 2.5:
+            continue
+        if region and not (region[0] <= p[0] <= region[2] and region[1] <= p[1] <= region[3]):
+            continue
+        bx, by, bw, bh = level.bounds
+        if not (bx + 0.6 <= p[0] <= bx + bw - 0.6 and by + 0.6 <= p[1] <= by + bh - 0.6):
             continue
         score = min(min(sim.v_len(sim.v_sub(p, q)) for q in other[::3]) if other else 99.0 for other in others)
         best = max(best, score)
@@ -96,9 +108,38 @@ def tune_zones(level, samples=120):
     return best[0]
 
 
+def _score_chunk(args):
+    level, combos, items = args
+    import design_search as ds_local
+    out = []
+    for combo in combos:
+        steps = ds_local.steps_from(combo, items)
+        out.append((_necessity_score(level, steps), steps))
+    return out
+
+
+def search_goal_on_path(level, intent, limit=400):
+    """Picks the rotations / positions of the intended items that maximize the necessity score."""
+    import itertools
+    candidate_lists = [ds.zone_candidates(level, item, zi, 0.5) for item, zi in intent]
+    items = [item for item, _ in intent]
+    combos = list(itertools.islice(itertools.product(*candidate_lists), limit))
+    size = max(8, len(combos) // 16)
+    chunks = [(level, combos[i:i + size], items) for i in range(0, len(combos), size)]
+    results = [r for part in ds._pool().map(_score_chunk, chunks) for r in part]
+    results.sort(key=lambda r: -r[0])
+    return results[0] if results else (0.0, None)
+
+
 def finalize(level, allow_search=True, grid=0.5):
     report = {'searched': False, 'success': False, 'stars': [False] * 3, 'time': 0.0, 'alternatives': None}
     steps = level.solution_steps
+    if getattr(level, 'goal_on_path', False) and steps and not _placements_valid(level, steps):
+        score, best_steps = search_goal_on_path(level, [(s['itemId'], s['zoneIndex']) for s in steps])
+        if best_steps:
+            level.solution_steps = best_steps
+            steps = best_steps
+        report['searched'] = True
     if getattr(level, 'tune_zones', None) and _placements_valid(level, steps):
         report['tuned'] = tune_zones(level)
     if getattr(level, 'goal_on_path', False) and _placements_valid(level, steps):

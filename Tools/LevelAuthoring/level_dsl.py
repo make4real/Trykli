@@ -111,6 +111,7 @@ class Level:
         self.auto_goal = False  # allow the build to move the exit onto the best intended trajectory
         self.goal_on_path = False  # place the exit on the reference trajectory so that every item is required
         self.tune_zones = {}  # zone index -> (dx, dy) range explored to make every item necessary
+        self.goal_region = None  # (xmin, ymin, xmax, ymax) where goal_on_path may put the exit
         self.report = {}
 
     # ---------------------------------------------------------------- geometry
