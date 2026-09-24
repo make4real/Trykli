@@ -1,4 +1,5 @@
 # Materials
 
-Physics materials are created at runtime by `PhysicsMaterials` (default, frictionless, Trykli).
-**Tools > TRYKLI > Setup Project** also saves editable copies in `Materials/Physics/` for reference.
+Physics materials (default, frictionless, Trykli body) are created in code by `PhysicsMaterials` and tuned in
+`Resources/TrykliGameplayConfig.asset` (Trykli friction / bounciness). Rendering materials for the final art
+(sprite shaders, particles) can be stored here.
